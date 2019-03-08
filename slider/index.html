@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/animate.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            display: block;
+        }
+        .banner-container{
+            width: 500px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .banner-container ul li{
+            float: left;
+        }
+        .banner-container ul{
+            width: 8000px;
+            position: relative;
+            left:0px;
+        }
+        .banner{
+            position: relative;
+            width: 660px;
+            margin:150px auto 0;
+            overflow: hidden;
+        }
+        .banner2{
+            position: relative;
+            width: 660px;
+            margin:150px auto 0;
+            overflow: hidden;
+        }
+        .banner-btn a img{
+            width: 50px;
+        }
+        .banner-btn a{
+            position:absolute;
+        }
+        .banner-btn a.prev{
+            left: 0;
+            top: 40%;
+        }
+        .banner-btn a.next{
+            right:0;
+            top: 40%;
+        }
+        .banner-page ul li{
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            display: inline-block;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 2px;
+        }
+        .banner-page ul li.banner-pageactive{
+            background: red;
+        }
+        .banner-page{
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-container">
+            <ul>
+                <li><img src="img/1.jpg"></li>
+                <li><img src="img/2.jpg"></li>
+                <li><img src="img/3.jpg"></li>
+                <li><img src="img/4.jpg"></li>
+                <li><img src="img/5.jpg"></li>
+                <li><img src="img/6.jpg"></li>
+                <li><img src="img/7.jpg"></li>
+            </ul>
+        </div>
+        <div class="banner-page">
+        </div>
+        <div class="banner-btn">
+            <a href="##" class="prev"><img src="img/prev.png"></a>
+            <a href="##" class="next"><img src="img/next.png"></a>
+        </div>
+    </div>
+
+    <div class="banner2">
+        <div class="banner-container">
+            <ul>
+                <li><img src="img/1.jpg"></li>
+                <li><img src="img/2.jpg"></li>
+                <li><img src="img/3.jpg"></li>
+                <li><img src="img/4.jpg"></li>
+                <li><img src="img/5.jpg"></li>
+                <li><img src="img/6.jpg"></li>
+                <li><img src="img/7.jpg"></li>
+            </ul>
+        </div>
+        <div class="banner-page">
+        </div>
+        <div class="banner-btn">
+            <a href="##" class="prev"><img src="img/prev.png"></a>
+            <a href="##" class="next"><img src="img/next.png"></a>
+        </div>
+    </div>
+
+
+    <script>
+       /* window.onload = function(){
+            var oBanner = document.querySelector(".banner");
+            var oBannerContainer = oBanner.querySelector(".banner-container");
+            var oBannerUl = oBannerContainer.querySelector("ul");
+            var oBannerLi = oBannerUl.querySelectorAll("li");
+            var oBannerLilen = oBannerLi.length;
+            var oBannerBtn = oBanner.querySelector(".banner-btn");
+            var oBannerprev = oBannerBtn.querySelector(".prev");
+            var oBannernext = oBannerBtn.querySelector(".next");
+            var oBannerLiW = oBannerLi[0].offsetWidth;
+            var oBannerPage = oBanner.querySelector(".banner-page");
+            var oBannerPageUl = document.createElement("ul");
+            var num = 0;
+            var flag = true;
+            var timer = "";
+
+            //插入元素
+            oBannerUl.appendChild(oBannerLi[0].cloneNode(true));
+            oBannerUl.insertBefore(oBannerLi[oBannerLilen-1].cloneNode(true),oBannerLi[0]);
+            oBannerUl.style.left = "-500px";
+            oBannerPage.appendChild(oBannerPageUl);
+            for(let i=0;i<oBannerLilen;i++){
+                var oBannerPageUlLi = document.createElement("li");
+                oBannerPageUl.appendChild(oBannerPageUlLi);
+                var oBannerPageUlLis = oBannerPageUl.querySelectorAll("li");
+                oBannerPageUlLis[0].className = "banner-pageactive";
+                oBannerPageUlLis[i].onclick = function(){
+                    for(let j=0;j<oBannerPageUlLis.length;j++){
+                        oBannerPageUlLis[j].className = "";
+                    }
+                    oBannerUl.animate({"left":-oBannerLiW*(i+1)});
+                    this.className = "banner-pageactive";
+                    num = i;
+                }  
+            }
+            //移入停止定时器
+            oBanner.onmouseover = function(){
+                clearInterval(timer)
+            }
+            //离开再开启定时器
+            oBanner.onmouseleave = function(){
+                autoplay();
+            }
+            //下一个按钮
+            oBannernext.onclick = function(){
+                Controlswitch(1,oBannerLilen,-500,0)
+            }
+            //上一个按钮
+            oBannerprev.onclick = function(){
+                Controlswitch(2,-1,(-oBannerLiW*oBannerLilen),(oBannerLilen-1))
+            };
+            function Controlswitch(next,targetnum,targetleft,changenum){
+                if(flag){
+                    flag = false;
+                    if(next == 1){
+                        num++;
+                    }else{
+                        num--;
+                    };
+                    oBannerUl.animate({"left":-oBannerLiW*(num+1)},function(){
+                        if(num == targetnum){
+                            oBannerUl.style.left = targetleft + "px";
+                            num =changenum;
+                        }
+                        flag = true;
+                        pageactive();
+                    });
+                }
+            }
+            function pageactive(){
+                for(let j=0;j<oBannerPageUlLis.length;j++){
+                    oBannerPageUlLis[j].className = "";
+                }
+                oBannerPageUlLis[num].className = "banner-pageactive";
+            }
+            //自动滚动
+            function autoplay(){
+                timer = setInterval(function(){
+                    num++;
+                    oBannerUl.animate({"left":-oBannerLiW*(num+1)},function(){
+                        if(num == oBannerLilen){
+                            oBannerUl.style.left = "-500px";
+                            num = 0;
+                        }
+                        pageactive();
+                    });
+                    
+                },2000)
+            }
+            autoplay();
+        };*/
+        //修改成面向对象
+       window.onload = function(){
+            var s1 = new Slider(".banner");
+            s1.init();
+            var s2 = new Slider(".banner2");
+            s2.init();
+        }
+        /*function Slider(id){
+           // console.log(this);
+            this.oBanner = document.querySelector(id);
+            this.oBannerContainer = this.oBanner.querySelector(".banner-container");
+            this.oBannerUl = this.oBannerContainer.querySelector("ul");
+            this.oBannerLi = this.oBannerUl.querySelectorAll("li");
+            this.oBannerLilen = this.oBannerLi.length;
+            this.oBannerBtn = this.oBanner.querySelector(".banner-btn");
+            this.oBannerprev = this.oBannerBtn.querySelector(".prev");
+            this.oBannernext = this.oBannerBtn.querySelector(".next");
+            this.oBannerLiW = this.oBannerLi[0].offsetWidth;
+            this.oBannerPage = this.oBanner.querySelector(".banner-page");
+            this.oBannerPageUl =document.createElement("ul");
+            this.num = 0;
+            this.flag = true;
+            this.timer = "";
+        }
+        Slider.prototype.init = function(){
+            var that = this;
+            //插入元素
+            this.oBannerUl.appendChild(this.oBannerLi[0].cloneNode(true));
+            this.oBannerUl.insertBefore(this.oBannerLi[this.oBannerLilen-1].cloneNode(true),this.oBannerLi[0]);
+            this.oBannerUl.style.left = "-500px";
+            this.oBannerPage.appendChild(this.oBannerPageUl);
+            //创建导航器
+            for(let i=0;i<this.oBannerLilen;i++){
+                var that = this;
+                this.oBannerPageUlLi = document.createElement("li");
+                this.oBannerPageUl.appendChild(this.oBannerPageUlLi);
+                this.oBannerPageUlLis = this.oBannerPageUl.querySelectorAll("li");
+                this.oBannerPageUlLis[0].className = "banner-pageactive";
+                this.oBannerPageUlLis[i].onclick = function(){
+                    for(let j=0;j<that.oBannerPageUlLis.length;j++){
+                        that.oBannerPageUlLis[j].className = "";
+                    }
+                    that.oBannerUl.animate({"left":-that.oBannerLiW*(i+1)});
+                    this.className = "banner-pageactive";
+                    that.num = that.i;
+                }  
+            }
+            //调用定时器
+            this.autoplay();
+            //调用切换方法
+            this.oBannernext.onclick = function(){
+                that.Controlswitch(1,that.oBannerLilen,-500,0);
+            }
+            this.oBannerprev.onclick = function(){
+                that.Controlswitch(2,-1,(-that.oBannerLiW*that.oBannerLilen),(that.oBannerLilen-1));
+            }
+            //移入停止定时器
+            this.oBanner.onmouseover = function(){
+                clearInterval(that.timer)
+            }
+            //离开再开启定时器
+            this.oBanner.onmouseleave = function(){
+                that.autoplay();
+            }
+
+        }
+        //导航器切换
+        Slider.prototype.pageswitch = function(){
+            for(let j=0;j<this.oBannerPageUlLis.length;j++){
+                this.oBannerPageUlLis[j].className = "";
+            }
+            this.oBannerPageUlLis[this.num].className = "banner-pageactive";
+        }
+        //切换下一个
+        Slider.prototype.Controlswitch = function(next,targetnum,targetleft,changenum){
+            var that = this;
+            if(this.flag){
+                this.flag = false;
+                if(next == 1){
+                    this.num++;
+                }else{
+                    this.num--;
+                };
+                this.oBannerUl.animate({"left":-this.oBannerLiW*(this.num+1)},function(){
+                    if(that.num == targetnum){
+                        that.oBannerUl.style.left = targetleft + "px";
+                        that.num =changenum;
+                    }
+                    that.flag = true;
+                    that.pageswitch();
+                });
+            }   
+        }
+        //自动滚动
+        Slider.prototype.autoplay = function(){
+            var that = this;
+            that.timer = setInterval(function(){
+                that.num++;
+                that.oBannerUl.animate({"left":-that.oBannerLiW*(that.num+1)},function(){
+                    if(that.num == that.oBannerLilen){
+                        that.oBannerUl.style.left = "-500px";
+                        that.num = 0;
+                    }
+                    that.pageswitch();
+                });
+            },2000)
+        }*/
+        //Es6
+        class Slider{
+            constructor(id){
+                console.log(this)
+                this.oBanner = document.querySelector(id);
+                this.oBannerContainer = this.oBanner.querySelector(".banner-container");
+                this.oBannerUl = this.oBannerContainer.querySelector("ul");
+                this.oBannerLi = this.oBannerUl.querySelectorAll("li");
+                this.oBannerLilen = this.oBannerLi.length;
+                this.oBannerBtn = this.oBanner.querySelector(".banner-btn");
+                this.oBannerprev = this.oBannerBtn.querySelector(".prev");
+                this.oBannernext = this.oBannerBtn.querySelector(".next");
+                this.oBannerLiW = this.oBannerLi[0].offsetWidth;
+                this.oBannerPage = this.oBanner.querySelector(".banner-page");
+                this.oBannerPageUl =document.createElement("ul");
+                this.num = 0;
+                this.flag = true;
+                this.timer = "";
+            }
+            init(){
+                var that = this;
+                //插入元素
+                this.oBannerUl.appendChild(this.oBannerLi[0].cloneNode(true));
+                this.oBannerUl.insertBefore(this.oBannerLi[this.oBannerLilen-1].cloneNode(true),this.oBannerLi[0]);
+                this.oBannerUl.style.left = "-500px";
+                this.oBannerPage.appendChild(this.oBannerPageUl);
+                //创建导航器
+                for(let i=0;i<this.oBannerLilen;i++){
+                    var that = this;
+                    this.oBannerPageUlLi = document.createElement("li");
+                    this.oBannerPageUl.appendChild(this.oBannerPageUlLi);
+                    this.oBannerPageUlLis = this.oBannerPageUl.querySelectorAll("li");
+                    this.oBannerPageUlLis[0].className = "banner-pageactive";
+                    this.oBannerPageUlLis[i].onclick = function(){
+                        for(let j=0;j<that.oBannerPageUlLis.length;j++){
+                            that.oBannerPageUlLis[j].className = "";
+                        }
+                        that.oBannerUl.animate({"left":-that.oBannerLiW*(i+1)});
+                        this.className = "banner-pageactive";
+                        that.num = that.i;
+                    }  
+                }
+                //调用定时器
+                this.autoplay();
+                //调用切换方法
+                this.oBannernext.onclick = function(){
+                    that.Controlswitch(1,that.oBannerLilen,-500,0);
+                }
+                this.oBannerprev.onclick = function(){
+                    that.Controlswitch(2,-1,(-that.oBannerLiW*that.oBannerLilen),(that.oBannerLilen-1));
+                }
+                //移入停止定时器
+                this.oBanner.onmouseover = function(){
+                    clearInterval(that.timer)
+                }
+                //离开再开启定时器
+                this.oBanner.onmouseleave = function(){
+                    that.autoplay();
+                }
+            }
+            //导航器切换
+            pageswitch(){
+                for(let j=0;j<this.oBannerPageUlLis.length;j++){
+                    this.oBannerPageUlLis[j].className = "";
+                }
+                this.oBannerPageUlLis[this.num].className = "banner-pageactive";
+            } 
+            //切换下一个  
+            Controlswitch(next,targetnum,targetleft,changenum){
+                var that = this;
+                if(this.flag){
+                    this.flag = false;
+                    if(next == 1){
+                        this.num++;
+                    }else{
+                        this.num--;
+                    };
+                    this.oBannerUl.animate({"left":-this.oBannerLiW*(this.num+1)},function(){
+                        if(that.num == targetnum){
+                            that.oBannerUl.style.left = targetleft + "px";
+                            that.num =changenum;
+                        }
+                        that.flag = true;
+                        that.pageswitch();
+                    });
+                }   
+            }
+            //自动滚动
+            autoplay(){
+                var that = this;
+                that.timer = setInterval(function(){
+                    that.num++;
+                    that.oBannerUl.animate({"left":-that.oBannerLiW*(that.num+1)},function(){
+                        if(that.num == that.oBannerLilen){
+                            that.oBannerUl.style.left = "-500px";
+                            that.num = 0;
+                        }
+                        that.pageswitch();
+                    });
+                },2000)
+            }
+        }
+    </script>
+</body>
+</html>
