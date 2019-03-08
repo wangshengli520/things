@@ -1,0 +1,58 @@
+/* pages/ticketList/ticketList.wxss */
+@import "../../../utils/wxParse/wxParse.wxss";
+page{
+  background: #f8f8f8;
+}
+.title{
+  height: 106rpx;
+  width: 680rpx;
+  padding: 0 35rpx;
+  line-height: 106rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+.ticketList-item{
+  width: 680rpx;
+  padding: 0 35rpx;
+  margin-bottom: 28rpx;
+  background: #fff;
+}
+.item-title{
+  height: 70rpx;
+  width: 680rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign{
+  height: 20rpx;
+  width: 20rpx;
+  background: #374256;
+}
+.sign-title{
+  width: 648rpx;
+  font-size: 32rpx;
+  color: #374256;
+}
+.item-content{
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #383838;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.lode{
+  margin-top: -20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #9f9f9f;
+  line-height: 80rpx;
+}
+.WxEmojiView{
+  display: block;
+  width: 100%;
+}
+.wxParse-img{
+  width: 132rpx;
+  height: 132rpx;
+}

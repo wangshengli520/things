@@ -1,0 +1,21 @@
+/* pages/faguixiangqing/faguixiangqing.wxss */
+
+.head{
+  width: 680rpx;
+  margin: auto;
+  font-size: 36rpx;
+  color: #585858;
+  margin-top: 35rpx;
+  line-height: 60rpx;
+}
+
+.text{
+  width: 680rpx;
+  height: 100%;
+  text-align: justify;
+  margin: auto;
+  margin-top: 30rpx;
+  color: #585858;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}

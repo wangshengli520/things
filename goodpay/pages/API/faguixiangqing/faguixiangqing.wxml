@@ -1,0 +1,8 @@
+<!--pages/faguixiangqing/faguixiangqing.wxml-->
+<!-- 法规条文详情 -->
+<!-- 顶部标题 -->
+<view class='head'>{{faguitiaowen.title}}</view>
+<!-- 文字描述 -->
+<view class='text'>
+     <text>{{faguitiaowen.article}}</text>
+</view>

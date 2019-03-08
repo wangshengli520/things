@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "找合作",
+    "usingComponents": {
+        "tabbar": "../../../tabbarComponent/tabbar"
+    }
+}

@@ -1,0 +1,52 @@
+/* pages/Sousuodetails/Sousuodetails.wxss */
+.head{
+  width: 750rpx;
+  height: 80rpx;
+  background: #f9f9f9;
+  color: #585858;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+.notice{
+  width: 680rpx;
+  height:270rpx;
+  border: 1rpx solid #a8abab;
+  margin:5rpx auto;
+  border-radius: 15rpx;
+}
+.warning{
+  text-align: center;
+  color: red;
+  line-height: 70rpx;
+  font-size: 32rpx;
+}
+.text{
+  width: 630rpx;
+  height: 200rpx;
+  margin: auto;
+  color: #383838;
+  font-size: 28rpx;
+  line-height: 45rpx;
+}
+.text text{
+  color: #0486ff;
+}
+.list{
+  width: 680rpx;
+  height: 90rpx;
+  padding: 0 35rpx;
+  border-bottom: 2rpx solid #a8abab;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #383838;
+}
+.brand{
+  width: 680rpx;
+  height: 90rpx;
+  padding: 0 35rpx;
+  border-bottom: 2rpx solid #a8abab;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #5e5e5e;
+}

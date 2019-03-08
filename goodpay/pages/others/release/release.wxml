@@ -1,0 +1,158 @@
+<!--pages/release/release.wxml-->
+<!-- 发布 -->
+<!-- 标题输入 -->
+<form bindsubmit='release'>
+<view class='head'>
+   <input placeholder="请输入标题" name="title" class='input'/>
+</view>
+<!-- 选择列表 -->
+<!-- 选择地区 -->
+<view class='form' hidden='{{isplace}}'>
+    <text>展示地区</text>
+     <view class='regin'>
+        <view class='left'>{{Province}}</view>  
+        <view class='right'></view>
+     </view>
+</view>
+<!-- 选择地区 -->
+<view class='form' hidden='{{isplace}}' bind:tap="onreIsvip">
+  <text>附加地区</text>
+  <picker class='pack' disabled="{{flags}}" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+   <view class='regin'>
+      <view class='left'>{{region}}</view>  
+      <view class='right'><image src='../../../images/1.png'></image></view>
+   </view>
+</picker>
+</view>
+<!-- <view class='form' hidden='{{showProvince}}'>
+  <view class="choose-title">请选择省份</view>
+    <view class="choose-group" bindtap='showProvince'>
+      {{text}}
+  </view>
+</view> -->
+
+
+
+<!-- <picker class='details' 
+mode="region" 
+bindchange="bindRegionChange" 
+value="{{region}}"
+>
+  <text class='area'>{{region[0]}}{{region[1]}}{{region[2]}}</text>
+  <image src='../../../images/4.png'></image> 
+</picker> -->
+
+<view class='form'>
+    <text>请选择机构</text>
+    <picker 
+    class='details' 
+    mode="selector" 
+    range="{{postList}}" 
+    value="{{postList[home]}}"
+    range-key="{{'name'}}" 
+    bindchange="institutionsPickerSelected">
+      <view class='instin'>
+        <view class='good'>{{postList[home].name}}</view>
+        <view class='right'><image src='../../../images/1.png'></image></view>
+      </view>     
+    </picker>
+</view>
+<view class='form'>
+  <text>请选择品牌</text>
+  <picker class='details' 
+      mode="selector"
+      range="{{brandList}}" 
+      value="{{brandList[index]}}"
+      range-key="{{'name'}}" 
+      bindchange="listenerPickerSelected">
+      <view class='instin'>
+          <view class='good'>{{brandList[index].name}}</view>
+          <view class='right'><image src='../../../images/1.png'></image></view>
+      </view>       
+  </picker>
+</view>
+<!-- 描述框 -->
+<view class='frame'>
+  <form bindsubmit="release">
+    <textarea  class='text' name="textarea" auto-focus="true" placeholder='在此处输入描述' maxlength="-1"></textarea>
+  </form>  
+</view>
+
+<view class='form uploadImgGallery' style="height:{{initHeight}}rpx">
+   <view class="gallery">
+    <view class="item" wx:for="{{images}}" wx:key="">
+        <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="delete" data-index="{{index}}">X</view>
+    </view> 
+    <view class="item" bindtap="chooseImage" wx:if="{{imagesLength<8}}">
+        <view class='addIcon'>+</view>
+    </view>
+</view> 
+</view> 
+
+
+
+<radio-group class="radio-group">
+    <label class="radio" wx:for="{{modeList}}" wx:key="index">
+    <radio value="{{item.name}}" 
+    bindtap='radio' 
+    data-id="{{item.key}}" 
+    checked="{{_key==item.key?true:''}}"/>
+    <text>{{item.name}}</text>
+    </label>
+</radio-group>
+<block wx:if="{{key==0||key==1}}">
+    <picker class='pick-data' 
+    bindchange="bindDateChange"
+    range="{{dateList}}" 
+    value="{{dateList[suffix]}}"
+    range-key="{{'month'}}">
+    <view class="picker">
+    服务时长<view class='flex'>{{dateList[suffix].month}}{{serviceTime}}</view>
+    </view>
+    </picker>
+<view class='data'> 
+   <text>支付金额</text>
+   <view class='flex'>{{money}}元</view>
+</view>
+</block>
+<view class="notes">
+  <view>发布说明</view>
+  <view>1、严禁发布违法国家法律法规、暴力色情等不良内容；</view>
+  <view>2、【我要置顶】将再全国范围内显示并再首页的为您推荐中显示并将获得公众号菜单栏中POS服务商展位；</view>
+  <view>3.【我要曝光】将会在15个省市（可自行选择）范围内展示，也将获得公众号的POS城市服务商展位；</view>
+  <view>4.【免费发布】普通会员将会在本省市范围内展示，不可选择省市，系统将自动为您定位，<text class="notes-vip" bind:tap="notesTovip">VIP会员</text>将会在5个省市展示（省市可自行选择）；</view>
+  <view>5、如出现无法发布、失败等情况，请打开你的微信，搜索公众号并关注<text class="notes-bao" bind:tap="notesBao">“支付曝光台”</text>微信公众号，一站式解决您的问题。付费成功后无法退款，不看提现；</view>
+  <view class="notes-zhu"><text>注：</text>VIP会员将会发布置顶、曝光时给予<text>6.88折</text>优惠。</view>
+  <view class="notes-baotip {{showViews ? 'notesshow':''}}">
+    <view class="notes-cha" bind:tap="notesCha">
+      <image src="../../../images/notes-baotip.png"></image>
+    </view>
+    <view class="notes-baos">
+      <image src="../../../images/notes-bao.jpg"></image>
+    </view>
+    <view class="notes-ewm" bind:tap="Notesewm">保存二维码</view>
+  </view>
+</view>
+<!-- 确认发布 -->
+<button class='release'  form-type='submit'>确认发布</button>
+</form>
+
+
+
+    <!--弹出手机验证码-->    
+<view class='invite_show' hidden="{{flag}}" >
+   <view class='show_img'>   
+     <checkbox-group class="checkbox-group" bindchange="checkboxChange">  
+        <label class="checkbox" wx:for="{{items}}" wx:for-item="i">  
+          <checkbox value="{{i.name}}" checked="{{i.checked}}" />{{i.value}}  
+        </label>  
+      </checkbox-group>  
+        <button class='view_button'  bindtap='bindProvince'>确认绑定</button> 
+   </view>
+</view>
+
+
+

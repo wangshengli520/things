@@ -1,0 +1,18 @@
+<!--pages/Xuanzexukediqu/Xuanzexukediqu.wxml-->
+<view class='head'>
+  已选地区(长按可编辑)
+</view>
+<!-- 已选择地区 -->
+<view class='cente' wx:for="{{storageData}}" wx:key="*this">
+   <view class='region active' 
+   bindlongpress="deleteImage" 
+   data-index="{{index}}">
+   {{item.city}}
+    <text class='delete' wx:if="{{item.show}}" data-index="{{index}}" catchtap='deleteSelf'>×</text> 
+   </view>
+</view>
+<view class='head background'>许可地区</view>
+<!-- 许可地区列表 -->
+<view class='province' wx:for="{{areaList}}" wx:key="*this">
+   <view class="region {{item.state==1?'active':''}}" bindtap='clickItem' data-id='{{index}}' data-city='{{item.city}}'>{{item.city}}</view>
+</view>

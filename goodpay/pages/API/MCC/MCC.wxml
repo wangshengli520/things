@@ -1,0 +1,52 @@
+<!--pages/MCC/MCC.wxml-->
+<!-- MCC查询 -->
+<view class='container'>
+    <view class='title'>
+        查询发卡名称、机构代码、卡名、卡种
+    </view>
+    <view class='userInput'>
+        <view class='userInput-lt'>卡号:</view>
+        <form bindsubmit="searchSubmit" action="">
+        <input class='userInput-rt' 
+        placeholder='请输入完整的卡号进行查询'
+        type="number"
+        bindblur="bindblur"
+        value='{{inputValue}}' 
+        bindinput='searchProduct'></input>
+        </form>
+    </view>
+    <button class='btn' bindtap='showsearch'>查询</button>
+    <view class='posShow' hidden='{{flag}}'>
+          <view class='pos-container'>
+              <image src="{{BINList.bank_logo}}" class='bank_logo'></image>
+              <view class='pos-tit'>发卡行名称及机构代码：</view>
+              <view class='pos-content'>
+              {{BINList.bank_name}}({{BINList.bank_id}})
+              </view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>卡号：</view>
+              <view class='pos-content'>{{BINList.bankno}}</view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>卡名：</view>
+              <view class='pos-content'>{{BINList.card_name}}</view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>卡种：</view>
+              <view class='pos-content'>{{BINList.card_type}}</view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>卡使用区域：</view>
+              <view class='pos-content'>{{BINList.area}}</view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>银行电话号码：</view>
+              <view class='pos-content'>{{BINList.bank_phone}}</view>
+          </view>
+          <view class='pos-container'>
+              <view class='pos-tit'>卡网站：</view>
+              <view class='pos-content'>{{BINList.bank_url}}</view>
+          </view>
+    </view>
+</view>

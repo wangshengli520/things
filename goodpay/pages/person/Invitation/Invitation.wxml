@@ -1,0 +1,92 @@
+<!--pages/Invitation/Invitation.wxml-->
+<view class='activity-time'>本期活动时间:{{begin}} - {{end}} </view>
+<view class='tips-how'>
+    如何才能上榜
+    <image src='../../../images/tips.png' class='tips-img'></image>
+</view>
+<view class='phone-tab'>
+    <view class='items' wx:for="{{darenList}}">
+        <view class='item'>{{item.phone}}</view>
+        <view class='item'>{{item.remark}}</view>
+        <view class='item'>{{item.darenMoney}}</view>
+    </view>
+</view>
+<view class='seemore' bindtap='showAllBang'>
+  查看完整榜单
+  <image src='../../../images/arrow.png' class='tips-img'></image>
+</view>
+<view class='ranking'>我当前排名：{{daren.rownum}}</view>
+<view class='myinvite-content'>
+    <view class='myinvite'>{{daren.remark}}</view>
+    <view class='doyen'>{{daren.darenMoney}}</view>
+</view>
+<view class='forward'>
+  整点发放，可体现
+  <image src='../../../images/arrow.png' class='tips-img'></image>
+</view>
+
+<view class='tips-rule' bindtap='showRule'>
+活动规则
+<image src='../../../images/tips.png' class='tips-img'></image>
+</view>
+
+<view class='friends'>
+    <view class='friends-lt'>邀请好友扫二维码</view>
+    <view class='friends-rt'  bindtap='popup'>
+      <image src='../../../images/QRCode.png' class='tips-img'></image>
+    </view>
+</view>
+<button class='share-btn'  data-name="shareBtn" open-type="share">
+    点击分享立即赚钱
+</button>
+<!-- <view class='popup' catchtouchmove="preventTouchMove">
+    <view class='popup-content'>
+    <image src='../../images/close.png' class='close'></image>
+        <view class='header'>邀友达人榜</view>
+    </view>
+</view> -->
+
+
+<view class='popup' catchtouchmove="preventTouchMove" hidden='{{showBang}}'>
+  <view class='popup-content'>
+  <image src='../../../images/close.png' class='close' bindtap='closeBang'></image>
+    <view class='header'>邀友达人榜</view>
+      <scroll-view scroll-y='true' class='tab-list'>
+        <view class='tab-header'>
+            <view class='header-item'>当前名次</view>
+            <view class='header-item'>手机尾号</view>
+            <view class='header-item'>邀友奖励</view>
+            <view class='header-item'>达人奖励</view>
+          </view>
+          <view class='tab-body'>
+          <view class='tab-rows' wx:for="{{darenAllList}}">
+            <view class='row-item'>{{item.rownum>=4?item.rownum:''}}</view>
+            <view class='row-item'>{{item.phone}}</view>
+            <view class='row-item'>{{item.remark}}</view>
+            <view class='row-item'>{{item.darenMoney}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+
+   <!-- 二维码弹出层 -->
+   
+       <view class='popup2' catchtouchmove="preventTouchMove" hidden='{{showHide}}' bindtap='disappear'>
+        <view class='popup-content img-content'>
+        <image src='../../../images/close.png' class='close' bindtap='closeQR'></image>
+        <view class='header'>邀请扫码</view>
+          <image  class="image" src='{{QRUrl}}'></image>
+        </view>
+        </view>
+
+
+    <view class='popup2' catchtouchmove="preventTouchMove" hidden='{{ruleIsShow}}'>
+<view class='popup-content'>
+<image src='../../../images/close.png' class='close' bindtap='closeRule'></image>
+<view class='header'>活动规则</view>
+<scroll-view scroll-y='true' class='guiz' style='height:580rpx; font-size:32rpx'>
+　{{activityRule}}
+</scroll-view>
+</view>
+</view>

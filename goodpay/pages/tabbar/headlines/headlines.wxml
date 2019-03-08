@@ -1,0 +1,38 @@
+<!--支付头条-->
+<view class="headlines">
+	<view class='headlines-main'>
+		<!-- <view class='headlines-list headlines-one'  bind:tap="onToheadlines">
+			<text>3个美食号动图技巧，让你的广告费翻倍</text>
+			<view class='headlines-imgm'>
+				<image src="../../../images/headlines-img1.jpg" class="headlines-img"></image>
+				<image src="../../../images/headlines-img1.jpg" class="headlines-img"></image>
+				<image src="../../../images/headlines-img1.jpg" class="headlines-img"></image>
+			</view>
+			<view class="headlines-bot">
+				<text>2000-10-10</text>
+				<text>评论数：11</text>
+				<text>(文字类型)</text>
+			</view>
+		</view> -->
+		<view 
+			class='headlines-list'  
+			bind:tap="onToheadlines"
+			wx:for="{{article}}"
+			data-i="{{index}}"
+		>
+			<view class="headlines-listt clearfix">
+				<text class="headlines-text">{{item.articleTitle}}</text>
+				<image src="../../../images/headlines-img2.jpg" class="headlines-listimg"></image>
+			</view>
+			<view class="headlines-bot">
+				<text>{{item.createDate}}</text>
+				<!-- <text>评论数：11</text>
+				<text>(文字类型)</text> -->
+			</view>
+		</view>
+	</view>
+</view>
+<!--tabbar-->
+<view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

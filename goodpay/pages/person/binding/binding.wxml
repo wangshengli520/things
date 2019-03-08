@@ -1,0 +1,46 @@
+<!--pages/binding/binding.wxml-->
+<view class='container'>
+<form bindsubmit='searchBox'>
+    <view class='header'>
+        请绑定持卡人本人的银行卡或支付宝
+    </view>
+    <view class='item-menu'>
+        <view class='justify'>提现方式<text></text></view>
+        <view class='item-content'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+            {{array[index]}}
+            </view>
+            </picker>
+           <text class='arrow'>></text>
+        </view>
+    </view>
+    <view class='item-menu'>
+        <view class='justify'>持卡人<text></text></view>
+        <view class='item-content'>
+            <view class='inputView'>
+                <input placeholder="请输入持卡人" name="remark" placeholder-class="userInput" bindfocus="bindfocus" value="{{inputTxt}}"/>
+            </view>
+        </view>
+    </view>
+    <view class='item-menu'>
+        <view class='justify'>卡号<text></text></view>
+        <view class='item-content'>
+            <view class='inputView'>
+                <input type="number" placeholder="请输入卡号" name="cardNo" value='{{cardNo}}' placeholder-class="userInput"/>
+            </view>
+        </view>
+    </view>
+
+  <view class='item-menu'>
+        <view class='justify'>开户行<text></text></view>
+        <view class='item-content'>
+            <view class='inputView'>
+                <input placeholder="请输入你的开户行" value="{{cardName}}"  name="cardName" placeholder-class="userInput"/>
+            </view>
+        </view>
+    </view>
+
+   <button class='btn' form-type='submit'>确认绑定</button>
+    </form>
+</view>

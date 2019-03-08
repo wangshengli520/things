@@ -1,0 +1,36 @@
+<!--pages/region/region.wxml-->
+<!-- 地区代码 -->
+<view class='head'>
+      <form bindsubmit="searchSubmit" action="">
+      <image src='../../../images/search.png' class='image'></image>
+      <input class='input' 
+      placeholder='搜索关键词'
+      bindblur="bindblur"
+      bindconfirm="searchProduct" 
+      value="{{inputValue}}"></input>
+      </form>
+</view>
+    <view class='text' hidden='{{show}}'>共搜索到{{provinceList.length}}条数据</view>
+<view class='searchContent' hidden='{{show}}'>
+    <view class='td'>
+        <view class='item-left'>地区</view>
+        <view class='item-right'>代码</view>
+    </view>
+    <view class='th'  style='margin-bottom:10rpx'   wx:for="{{provinceList}}" wx:key="*this">
+        <view class='th-left'  
+        bindtap='clickShow'  
+        data-index='{{item.id}}'>
+        <image src='../../../images/1.png' class='pull-down {{(index+1)==showIndex?"up":""}}'></image>
+        {{item.placeName}}
+        </view>
+        <view class='th-right'  bindtap='clickShow'  data-index='{{item.id}}'>{{item.placeCode}}</view>
+        <view  class="sonChild"  wx:if="{{showIndex==item.id}}">
+          <block   wx:for="{{item.cityList}}" wx:key="*this">
+            <view class='th-hide'>
+                <view class='hide-lt'>{{item.placeName}}</view>
+                <view class='hide-rt'>{{item.placeCode}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/posCode/posCode.wxml-->
+<!-- POS返回码查询 -->
+<view class='container'>
+    <view class='title'>
+        查询POS返回码
+    </view>
+    <view class='userInput'>
+        <view class='userInput-lt'>返回码:</view>
+        <input placeholder="请输入POS码进行查询" bindinput='posInput' class='userInput-rt'></input>
+    </view>
+    <button class='btn' bindtap='searchPos'>查询</button>
+    <view class='posShow' hidden="{{flag}}" bindtap="hide">
+          <block wx:for="{{poscodeList}}" wx:key="*this">
+              <view class='pos-container'>
+                  <view class='pos-tit'>POS机显示：</view>
+                  <view class='pos-content'>{{item.posShow}}</view>
+              </view>
+              <view class='pos-container'>
+                  <view class='pos-tit'>处理方法：</view>
+                  <view class='pos-content'>{{item.posMethod}}</view>
+              </view>
+          </block>
+    </view>
+</view>

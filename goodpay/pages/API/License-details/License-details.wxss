@@ -1,0 +1,39 @@
+/* pages/License-details/License-details.wxss */
+.head{
+  width: 680rpx;
+  font-weight: bold;
+  margin: auto;
+  height: 70rpx;
+  background: #f2f2f2;
+  padding: 0 36rpx;
+  border-top: 2rpx solid #e2e2e2;
+  font-size: 28rpx;
+  color: #818181;
+  line-height: 70rpx;
+}
+.ten{
+  text-align: center;
+  color: #383838;
+}
+.item-text{
+   width: 170rpx;
+   height: 100%;
+   float: left;
+}
+.item-title{
+   width: 500rpx;
+   height: 100%;
+   float: left; 
+}
+.list{
+    width: 680rpx;
+    font-weight: bold;
+    margin: auto;
+    padding: 25rpx 36rpx;
+    display: flex;
+    border-bottom: 2rpx solid #f4f2f2;
+    font-size: 28rpx;
+    color: #383838;
+    line-height: 40rpx;
+    
+}

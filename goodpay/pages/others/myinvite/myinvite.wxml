@@ -1,0 +1,9 @@
+<!--pages/myinvite/myinvite.wxml-->
+<view class='myinvite'>
+    <view class='people'>20</view>
+    <view class='accumulative'>
+        <image src='../../images/money.png' class='money-img'></image>
+        累计奖励222222元
+    </view>
+</view>
+

@@ -1,0 +1,37 @@
+<!--pages/Regulations-home/Regulations-home.wxml-->
+<!-- 法规条文首页 -->
+<!-- 搜索 -->
+<view class='head'>
+  <form bindsubmit="searchSubmit" action="">
+    <image src='../../../images/search.png' class='image'></image>
+    <input class='input' 
+    placeholder='搜索关键词'
+    bindblur="bindblur"
+    bindconfirm="searchProduct" 
+    value="{{inputValue}}"></input>
+  </form>
+</view>
+<view class='text'>标题中不含有关键字的搜索结果将出现在全文检索中</view>
+<!-- 检索 -->
+<view class='retrieve'>
+    <view data-select="{{item.index}}" class=" {{item.index == catalogSelect ? 'active':''}} swiper" wx:for="{{home}}" bindtap="chooseCatalog" wx:key="*this">{{item.name}}</view>
+</view>
+<!-- 历史记录 -->
+<view class='foot'>
+  <view class='history'>
+    <view class='record'>
+        <text>搜索历史记录：</text>
+        <text class='chu' bindtap='clearSearchData'>清除</text>
+    </view>
+    <view class='history-content'>
+        <block wx:for="{{sercherStorage}}" wx:key="*this">
+              <button class='content' data-value='{{item}}' bindtap='historyChoose'>{{item}}</button>
+        </block>
+    </view>
+  </view>
+</view>
+<!-- 搜索关键词 -->
+<view class='keywords'>热门搜索关键词：</view>
+<view class='buto'>
+      <button class='content' wx:for="{{item}}" wx:key="*this" data-hotwords='{{item}}' bindtap="chooseKey">{{item}}</button>     
+</view>

@@ -1,0 +1,84 @@
+<!-- 找合作详情-->
+<view class="header">
+    <view class="header-tit">{{cooperation.title}}</view>
+    <view class="header-tittwo">
+        <text>支付机构</text>
+        <!-- <text>POS品牌</text> -->
+    </view>
+    <!--头部内容-->
+    <view class="head-main">
+        <view class="head-mlist">
+            <text class="head-mlisttit">微信</text>
+            <text>dxl20170424</text>
+        </view>
+        <view class="head-mlist">
+            <text class="head-mlisttit">邮箱</text>
+            <text>568836710@qq.com</text>
+        </view>
+        <view class="head-mlist head-about clearfix">
+            <view class="head-mlisttit">介绍</view>
+            <view class="head-aboutxt">
+               <view>
+                    {{cooperation.article}}
+               </view>
+                <view class="head-aboutiimg">
+                        <swiper
+                        indicator-dots="{{indicatorDots}}"
+                        autoplay="{{autoplay}}"
+                        interval="{{interval}}"
+                        duration="{{duration}}"
+                        display-multiple-items="{{3}}"
+                        previous-margin="{{5}}"
+                      >
+                        <block 
+                            wx:for="{{imgUrls}}"
+                            WX:key="{{index}}"
+                        >
+                          <swiper-item>
+                            <image src="{{item}}" class="slide-image"  />
+                          </swiper-item>
+                        </block>
+                      </swiper>  
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--姓名-->
+<view class="coopname">
+    <view class="coopname-l">
+        <image src="{{cooperation.headImgUrl}}"></image> 
+    </view>
+    <view class="coopname-lm">
+        <view>姓名 <text class="coopname-color">公司职位</text></view>
+        <view class="coopname-color">公司名称（最多可显示两行）</view>
+    </view>
+    <view class="coopname-r">
+        <image src="../../../images/coopname-img1.jpg"></image>
+        <image src="../../../images/coopname-img2.jpg"></image>
+    </view>
+</view>
+<!--人气点赞-->
+<view class="cooppoint">
+    <view class="cooppoint-list">
+        <image src="../../../images/browse.png" mode="widthFix"></image>
+        <view>人气：{{cooperation.viewer}}</view>
+    </view>
+    <view class="cooppoint-list">
+        <image src="../../../images/laud.png" mode="widthFix"></image>
+        <view>点赞：{{cooperation.zanNum}}</view>
+    </view>
+    <view class="cooppoint-list">
+        <image src="../../../images/coopname-img3.png" mode="widthFix"></image>
+        <view>收藏：{{cooperation.collNum}}</view>
+    </view>
+</view>
+<!--收藏到名片夹-->
+<view class="coop-ming">
+    <text>收藏到名片夹</text>
+</view>
+<!-- 打开我的名片和创建 -->
+<view class="coop-opencreate">
+    <view class="coop-open" bind:tap="onopenCard">打开我的名片</view>
+    <view class="coop-create" bind:tap="onCreatecard">创建我的名片</view>
+</view>

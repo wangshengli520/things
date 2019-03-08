@@ -1,0 +1,15 @@
+<!--pages/HuiYuanlist/HuiYuanlist.wxml-->
+<!-- 中国支付协会会员名单查询列表 -->
+<view class='header'>
+    <view class='title'>共查询到{{count}}条数据</view>
+    <view class='rows'>
+        <view class='left'>会员名称</view>
+        <view class='right'>类别</view>
+    </view>
+</view>
+<view class='list'>
+    <view class='list-rows' wx:for="{{xiehuihuiyuanList}}" wx:key="*this">
+      <view class='left-item'>{{item.niceName}}</view>
+      <view class='right-item'>{{item.type}}</view>
+    </view>
+</view>

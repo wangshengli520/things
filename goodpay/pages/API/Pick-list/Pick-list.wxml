@@ -1,0 +1,21 @@
+<!--pages/Pick-list/Pick-list.wxml-->
+<!-- 银行选号 -->
+<block wx:if="{{!isShow}}">
+  <view class='header'>
+    <view class='information'>共查询到{{count}}条数据</view>
+    <view class='header-title'>
+        <view class='left'>联行行号</view>
+        <view class='right'>银行名称</view>
+    </view>
+  </view>
+  <view class='list'>
+      <view class='info-content' wx:for="{{lianhanghaoList}}" wx:key="*this">
+        <view class='num'>{{item.bankNo}}</view>
+        <view class='name'>{{item.bankName}}</view>
+      </view>
+  </view>
+  <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</block>
+<view class='zanwu' wx:if="{{isShow}}">
+    暂无数据...
+</view>

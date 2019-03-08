@@ -1,0 +1,208 @@
+<!--pages/mycard/mycard.wxml-->
+<!-- 顶部信息 -->
+<view class='formAll'>
+  <form bindsubmit="formInfoSubmit">
+      <view class='form1'>
+          <view class='header'>
+            <image src='../../../images/timg.png' class='header-img'></image>
+            <view class="header-ico" bind:tap="onTocardd">
+                <image src="../../../images/ewm.png"></image>
+                <view>名片码</view>
+            </view>
+          </view>
+          <view class='info-header'>
+              <view class='like-box'>
+                  <view class='like-lt'>
+                      <view class='lt-top'>
+                          <image src='../../../images/like.png' class='like-img'></image>
+                          <text class='lt-top-text'>0</text>
+                      </view>
+                      <view class='lt-bottom'>
+                          受喜欢
+                      </view>
+                  </view>
+                  <view class='line-bg'></view>
+                  <view class='like-rt'>
+                        <view class='rt-top'>
+                          <image src='../../../images/Rankings.png' class='like-img'></image>
+                          <text class='lt-top-text'>0</text>
+                      </view>
+                      <view class='rt-bottom'>
+                          访问量
+                      </view>
+                  </view>
+              </view>
+              <view class='info-content'>
+                  <view class='user-header'>
+                      <image src='{{headImg}}' class='user-header'></image>
+                  </view>
+                  <view class='user-info'>
+                      <view class='nickname-box'>
+                          <input placeholder='您的职位(必填)' value="{{businessCard.remark}}" name="remark" placeholder-class='nickname'></input>
+                      </view>
+                      <view class='companyname-box'>
+                          <input placeholder='您的公司名称(必填)' value="{{businessCard.companyName}}" name="companyname" placeholder-class='companyname'></input>
+                      </view>
+                  </view>
+              </view>
+          </view>
+          <view class='info-items'>
+            <view class='info-item'>
+                <view class='info-icon'>
+                    <image src='../../../images/swiper-name.png' class='icon-img'></image>
+                </view>
+                <view class='info-box'>
+                    <view class='info-type'>姓名</view>
+                    <view class='info-input'>
+                        <input placeholder='请填写姓名' placeholder-class='user-input'  value="{{businessCard.name}}" name="name"></input>
+                    </view>
+                </view>
+                <view class='info-btn'>
+                    <button class='getcode' hidden='true'>获取</button>
+                </view>
+            </view>
+              <view class='info-item'>
+                  <view class='info-icon'>
+                      <image src='../../../images/phone.png' class='icon-img'></image>
+                  </view>
+                  <view class='info-box'>
+                    <view class='info-type'>手机</view>
+                    <view class='info-input'>
+                        <input placeholder='18326114738' placeholder-class='user-input'  value="{{businessCard.companyPhone}}" name="phone"></input>
+                    </view>
+                  </view>
+                  <view class='info-btn'>
+                      <button class='getcode' hidden='true'>获取</button>
+                  </view>
+              </view>
+              <view class='info-item'>
+                  <view class='info-icon'>
+                      <image src='../../../images/msg2.png' class='icon-img'></image>
+                  </view>
+                  <view class='info-box'>
+                    <view class='info-type'>微信</view>
+                    <view class='info-input'>
+                        <input placeholder='您的微信号(必填)' placeholder-class='user-input'  value="{{businessCard.phone}}"  name="weixin"></input>
+                    </view>
+                  </view>
+                  <view class='info-btn'>                     
+                  </view>
+              </view>
+              <view class='info-item'>
+                  <view class='info-icon'>
+                      <image src='../../../images/mail.png' class='icon-img'></image>
+                  </view>
+                  <view class='info-box'>
+                    <view class='info-type'>邮箱</view>
+                    <view class='info-input'>
+                        <input placeholder='您的邮箱(必填)' placeholder-class='user-input' value="{{businessCard.relName}}"   name="mail"></input>
+                    </view>
+                  </view>
+                  <view class='info-btn'>                     
+                  </view>
+              </view>
+              <view class='info-item'>
+                  <view class='info-icon'>
+                      <image src='../../../images/mail.png' class='icon-img'></image>
+                  </view>
+                  <view class='info-box'>
+                    <view class='info-type'>地址</view>
+                    <view class='info-input'> 
+                        <input placeholder='左侧图标可直接定位（必填）' value="{{companyAddress==''?businessCard.companyAddress:companyAddress}}" placeholder-class='user-input' name="companyAddress"></input>
+                    </view>
+                  </view>
+                  <view class='info-btn' bindtap='choosePosition'>
+                      <image src='../../../images/Location.png' class='icon-img2'></image>                     
+                  </view>
+              </view>
+
+          </view>
+          <view class='form1-btn'>
+              <button class='keep' formType="submit">保存</button>
+              <button class='sendcard' data-name="shareBtn" open-type="share">发送名片</button>
+          </view>
+      </view>
+  </form>
+  <form bindsubmit='formInfoSubmitOthers'>
+      <view class='form2'>
+          <view class='type-header'>
+              <view class='line-type'></view>
+              <view class='type-content'>
+                  <view class='type-text'>简介<text class='optional'>（选填）</text></view>
+                  <view class='label'>ABOUT</view>
+              </view>
+          </view>
+          <textarea 
+          bindblur="bindTextAreaBlur" 
+          auto-height 
+          maxlength='300'
+          placeholder="请填写公司，产品或者个人介绍，字数请控制在300字以内。" 
+          name="synopsis" 
+          value="{{businessCard.companyDescription}}"
+          placeholder-class='synopsis' 
+          class='textarea'></textarea>
+          <view class='type-header'>
+              <view class='line-type'></view>
+              <view class='type-content'>
+                  <view class='type-text'>宣传片<text class='optional'>（选填）</text></view>
+                  <view class='label'>VIDEO</view>
+              </view>
+          </view>
+  
+          <view class='video-content'>
+              <image src='../../../images/vip.png' class='vip-img' hidden='{{vipshow}}'></image>
+              <video style="width: 100%;height=400px;margin:1px;" wx:if="{{src}}" src="{{src}}"></video>
+              <video style="width: 100%;height=400px;margin:1px;" wx:if="{{businessCard.url}}" src="{{businessCard.url}}"></video>
+              
+              <view class='video-text-content' hidden='{{videoshow}}' >
+                  <image src='../../../images/upload.png' class='upload' bindtap="{{vipStatus?'bindButtonTap':'NoVip'}}"></image>
+                  <view class='tips'>视频大小请控制在25M与5分钟内</view>
+                  <view class='tips posion'>如果您没有宣传片,可以致电：</view>
+                  <view class='tips'>制片帮视频制作服务平台<text class='phone'>400-6285352</text></view>
+              </view>
+          </view>
+          <view class='type-header'>
+              <view class='line-type'></view>
+              <view class='type-content'>
+                  <view class='type-text'>相册<text class='optional'>（选填）</text></view>
+                  <view class='label'>Album</view>
+              </view>
+          </view>
+          <view class='Album-content' style="height:{{initImgHeight}}rpx">
+              <image src='../../../images/free.png' class='vip-img' hidden='{{imgshow}}'></image>
+              <view class='video-text-content' hidden='{{imgshow}}'>
+                  <image src='../../../images/commm.png' class='upload' bindtap='chooseImage' ></image>
+                  <view class='tips'>公司环境、团队、产品、个人等形象照</view>
+                  <view class='tips'>最多可以上传9张,照片将显示在名片上</view>
+                  <view class='tips posion'>如果您没有精美照片,可以致电：</view>
+                  <view class='tips'>可享拍即时摄影平台<text class='phone'>400-8880960</text></view>
+                  <view class='tips'>照片建议600*400像素</view>
+              </view>
+
+
+            <view class='form uploadImgGallery' style="height:{{initHeight}}rpx">
+              <view class="gallery">
+                <view class="item" wx:for="{{images}}" wx:key="">
+                    <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+
+                    <!-- 删除按钮 -->
+                    <view class="delete" hidden='true' bindtap="delete" data-index="{{index}}">X</view>
+                </view> 
+                <view class="item" bindtap="chooseImage" wx:if="{{imagesLength<8}}">
+                    <view class='addIcon'>+</view>
+                </view>
+            </view> 
+            </view> 
+
+          </view>
+          <view class='checkbox'>
+           <checkbox-group bindchange="checkboxChange">
+              <checkbox value="1"   checked="{{checked}}"/>公开到人脉集市，让更多人认识您！    
+            </checkbox-group>      
+          </view>
+          <view class='btn-box'>
+               <button class='keep2'  formType="submit">保存</button>
+          </view>
+      </view>
+  </form>
+</view>

@@ -1,0 +1,194 @@
+/* pages/Pay-licence/Pay-licence.wxss */
+
+.head{
+  width: 680rpx;
+  height: 50rpx;
+  margin: auto;
+  margin-top:30rpx;
+  color: #383838;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.instin{
+  width: 540rpx;
+  height: 60rpx;
+  border: 1rpx solid #c3c3c3;
+  float: left;
+  border-radius: 10rpx;
+}
+.input{
+  width:70%;
+  height: 50rpx;
+  border-bottom: 3rpx solid #ccc;
+  padding-left: 20rpx;
+  color: #9f9f9f;
+}
+
+.select_box{
+  width:75%;
+  height: 50rpx;
+  position: relative;
+  z-index: 100;
+}
+.select{
+  width:96%;
+  height: 50rpx;
+  border-bottom: 3rpx solid #ccc;
+  border-radius: 8rpx;
+  display: flex;
+  color: #9f9f9f;
+  align-items: center;
+  text-align: left;
+  padding-left: 25rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+  color: #9f9f9f;
+}
+.border{
+  width: 25rpx;
+  height:10rpx;
+  padding: 20rpx 5rpx;
+}
+.select_img{
+  width: 25rpx;
+  height: 9rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  width: 100%;
+  border:2rpx solid #efefef;
+  overflow-y: auto;
+  background: #fff;
+  color: #9f9f9f;
+  transition: height 0.3s;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size:28rpx;
+  border-bottom: 2rpx solid #efefef;
+  padding: 10rpx;
+  background: #fff;
+}
+.picker{
+  width:70%;
+  min-height: 50rpx;
+  border-bottom: 3rpx solid #ccc;
+  padding-left: 20rpx;
+  color: #9f9f9f; 
+  font-size: 28rpx;
+}
+.areas{
+  height:50rpx;
+  width:85%;
+  float: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.right{
+  width: 15rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  float: right;
+  margin-right:30rpx;
+}
+.right image{
+  width: 100%;
+  height: 100%;
+  transform:rotate(90deg); 
+}
+.foot{
+  width: 680rpx;
+  height: 500rpx;
+  
+  margin: auto;
+}
+.text{
+  width: 680rpx;
+  height: 60rpx;
+  padding: 0 36rpx;
+  margin-top: 40rpx;
+  line-height: 60rpx;
+  background: #f4f2f2;
+  font-size: 28rpx;
+  color: #666;
+}
+.checkbox{
+  width: 100%;
+  height: 450rpx;
+  float: left;
+}
+.left{
+  width: 50%;
+  height: 60rpx;
+  float: left;
+  margin-top: 20rpx;
+  display: flex;
+}
+.left-text{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #383838;
+
+}
+.card{
+  width: 280rpx;
+  height: 95rpx;
+  float: left;
+  text-align: center;
+  color: #383838;
+  line-height: 50rpx;
+}
+checkbox .wx-checkbox-input{
+  border: 2rpx solid #ccc;
+  width:30rpx; /* 背景的宽 */
+  height:30rpx; /* 背景的高 */
+  overflow: hidden;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border:2rpx solid #00a1ff;
+   width: 30rpx;
+   height: 30rpx;
+
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   width: 30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height:30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height:30rpx;
+   text-align: center;
+   border: 2rpx solid #00a1ff;
+   font-size:18rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: #00a1ff;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.button{
+  width: 680rpx;
+  margin: auto;
+  background: #374256;
+  color: #fff;
+  font-size: 32rpx;
+}
+.demo{
+  width: 680rpx;
+  margin: auto;
+  background: #e9464c;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+
+
+

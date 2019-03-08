@@ -1,0 +1,73 @@
+/* pages/personal/personal.wxss */
+.container{padding: 0rpx;margin: 0rpx;}
+.personl-top{
+  background: #374256;
+  height:222rpx;
+  width: 100%;
+  padding-top: 10rpx;
+}
+.userInfo{
+  height: 202rpx;
+  width:750rpx;
+  margin: 0 auto;
+  margin-top:0rpx; 
+  text-align: center; 
+}
+.user-img{
+  height: 192rpx;
+  width: 185rpx;
+}
+.user-img image{
+    height: 100%;
+    width: 100%;
+    border-radius: 12rpx;
+}
+.user-text{
+  height: 192rpx;
+  width: 100%;
+}
+.user-item{
+  height:90rpx;
+  width: 100%;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #FFF; 
+}
+.menu{
+  margin-top: 45rpx;
+}
+.menu-item{
+  height: 90rpx;
+  width: 680rpx;
+  padding: 0 35rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+}
+.user-group{
+   height: 80rpx;
+ width: 680rpx;
+  margin: 0 auto;
+  color: #000;
+}
+.user-group ul li{float: left;padding-right: 65rpx;font-size: 38rpx;text-align: center}
+
+.money{font-size: 38rpx}
+
+.product-name{width: 680rpx;height:110rpx;clear: both;margin: 0 auto;padding: 25rpx 0;border-bottom: 1px dotted #dcdcdc}
+.item-img{width: 100rpx;height: 100rpx;float: left}
+.item-img image{width: 100rpx;height: 100rpx;}
+.item-title{float: left;width: 452rpx;margin-left: 20rpx;
+  height: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;}
+  .line-heights{font-size:28rpx}
+.item-title text{font-size:30rpx}
+.item-article{width: 680rpx;clear: both;color: #999;padding-top: 20rpx;font-size: 28rpx;line-height: 50rpx;margin: 0 auto}
+.chanName{font-size:28rpx;color: #999;padding-top: 15rpx;}
+.tuijian_member{font-size: 28rpx;}
+.tuijian_money{font-size: 28rpx;}
+
+
+.active{border-bottom: 3rpx solid #374256;padding-bottom: 40rpx;}

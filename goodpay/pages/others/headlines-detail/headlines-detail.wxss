@@ -1,0 +1,204 @@
+page{
+    font-size: 30rpx;
+}
+.hl-headertit{
+    padding: 30rpx 40rpx 20rpx;
+    font-size:35rpx;
+    line-height:40rpx;
+}
+.hl-headerbox{
+    padding: 0 25rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hl-headerbtn button{
+    background: none;
+    padding: 0;
+    font-size: 30rpx;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    color: #9e9e9e;
+}
+.hl-headerbtn button::after{ 
+    border: none;
+}
+.hl-headerdate{
+    color: #4e90e6;
+}
+.hl-headercard{
+    color: #f39c01;
+    
+}
+/*支付名片*/
+.hl-card{
+    background: #eeeeee;
+    padding: 20rpx 0;
+}
+.coopname{
+    width: 100%;
+    background: #fff;
+    padding:20rpx 20rpx 0;
+    height:130rpx;
+    display: flex;
+}
+.coopname-l image{
+    width: 114rpx;
+    height: 114rpx;
+    border:5rpx solid #d2d0d5;
+    border-radius: 50%;
+}
+.coopname-lm{
+    margin-left: 30rpx;
+}
+.coopname-color{
+    color: #9a9a9a;
+}
+.coopname-r image:first-child{
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align:middle;
+    margin-right: 40rpx;
+}
+.coopname-r image:last-child{
+    width: 45rpx;
+    height: 45rpx;
+    vertical-align:middle;
+}
+.coopname-r{
+    padding-top: 30rpx;
+    margin-left: 50rpx;
+}
+.cooppoint{
+    background: #fff;
+    display: flex;
+    margin: 20rpx 30rpx 25rpx;
+    padding: 20rpx 0;
+    border-radius: 10rpx;
+}
+.cooppoint-list image{
+    width: 40rpx;
+}
+.cooppoint-list{
+    flex: 1;
+    text-align: center;
+}
+.coop-ming{
+    background: #518bee;
+    color:#fff;
+    margin: 0 30rpx;
+    height: 90rpx;
+    font-size:35rpx;
+    text-align: center;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+}
+.coop-opencreate{
+    margin:35rpx 30rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.coop-opencreate view{
+    width: 300rpx;
+    height: 86rpx;
+    background: #fff;
+    line-height: 86rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.coop-opencreate .coop-create{
+    background: #518bee;
+    color: #fff;
+}
+/*内容详情*/
+.hl-text{
+    padding: 20rpx 30rpx;
+    color:#9f9f9f;
+}
+.hl-views{
+    color: #9f9f9f;
+    margin-top: 30rpx;
+}
+.hl-quickly{
+    background: #4e90e6;
+    color: #fff;
+    width: 446rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    margin:30rpx auto 0;
+}
+.hl-quickly image{
+    width: 36rpx;
+    margin-right: 30rpx;
+    vertical-align: middle;
+}
+.hl-quickly text{
+    vertical-align: middle;
+}
+.hotnews-listl image{
+    width: 170rpx;
+    height: 130rpx;
+}
+.hotnews{
+    margin-top: 50rpx;
+    padding: 0 50rpx;
+}
+.hotnews-list{
+    display: flex;
+    margin-top: 50rpx;
+    padding-bottom: 20rpx;
+    border-bottom:2rpx solid #e4e4e4;
+}
+.hotnews .hotnews-list:last-child{
+    border-bottom:none;
+}
+.hotnews-tit{
+    position: relative;
+    line-clamp: 40rpx;
+    padding-left: 25rpx;
+}
+.hotnews-tit::before{
+    content: "";
+    background: #fe3636;
+    height: 40rpx;
+    width: 8rpx;
+    position: absolute;
+    left: 0;
+}
+.hotnews-listr{
+    margin-left: 30rpx;
+}
+.hotnews-listrdate image{
+    width: 25rpx;
+    margin-left: 17rpx;
+    margin-right: 3rpx;
+}
+.hotnews-listrdate{
+    float:right;
+    color: #6a6a6a;
+    margin-top:25rpx;
+}
+.hl-comlisttopl image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.hl-comlisttopr image{
+    width: 25rpx;
+}
+.hl-com{
+    margin-top: 40rpx;
+}
+.hl-comtit{
+    height: 80rpx;
+    background: #f8f8f8;
+    border-top: 2rpx solid #d7d7d7;
+    border-bottom:2rpx solid #d7d7d7;
+    padding: 0 30rpx;
+    display: flex;
+    line-height: 80rpx;
+    justify-content:space-between;
+}

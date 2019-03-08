@@ -1,0 +1,9 @@
+<!--pages/customer-flock/customer-flock.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<!-- 客户交流群 -->
+<view class='head'>
+    <view class='image'>
+       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class='text'>扫码加入本群</view>
+</view>

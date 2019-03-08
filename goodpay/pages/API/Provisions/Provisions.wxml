@@ -1,0 +1,26 @@
+<!--pages/Provisions/Provisions.wxml-->
+<!-- 法规条文列表 -->
+<view class='header-content'>
+  <view class='head'>以下为支付的搜索结果</view>
+  <!-- 检索 -->
+  <view class='retrieve'>
+      <view data-select="{{item.index}}" class=" {{item.index == catalogSelect ? 'active':''}} swiper" wx:for="{{home}}" bindtap="chooseCatalog" wx:key="*this">{{item.name}}</view>
+  </view>
+</view>
+<view class='list'>
+   <view class='company' wx:for="{{faguitiaowenList}}" bindtap='chooseCompany' data-id='{{item.id}}' 
+   data-title='{{item.title}}' data-article='{{item.article}}' wx:key="*this">
+    <block wx:if="{{catalogSelect==0}}">
+        <text class='left'>{{item.title}}</text>
+    </block>
+    <block wx:if="{{catalogSelect==1}}">
+        <text class='left'>{{item.article}}</text>
+    </block>
+     <view class='right'><image src='../../images/3.png'></image></view>
+   </view>
+    <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</view>
+
+
+
+

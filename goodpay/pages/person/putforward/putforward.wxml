@@ -1,0 +1,81 @@
+<!--pages/putforward/putforward.wxml-->
+<!-- 提现申请 -->
+<view class='container'>
+<form bindsubmit='bindBankMoney'>
+    <view class='sum-item'>
+        <view class='item-lt'>到银行卡</view>
+        <view class='item-rt' bindtap='showHide'>
+          <block wx:if="{{isShow}}">
+            暂时没有卡信息请添加银行卡
+          </block>
+          <block wx:else>
+             <view class='backName'>
+                {{bankname}}({{banknum}})
+             </view>
+          </block>
+            <text class='arrow'>></text>
+        </view>
+    </view>
+    <view class='putforwardnum'>
+        提现金额
+    </view>
+    <view class='inputView'>
+    ¥
+         <input placeholder="输入提现金额" name="money" class="input-left" value="{{AllMoney}}" placeholder-class="userInput"/>
+    </view>
+    <view class='account'>
+        <view class='account-lt'>
+             账户余额 <text class='balance'> ¥{{money}}</text>
+        </view>
+        <view class='account-rt' bindtap='tclick'>全部提现</view>                           
+    </view>
+    <button class='btn' form-type='submit'>提现</button>
+    </form>
+</view>
+<!-- 弹窗 -->
+<view class='popup {{showView?"show":""}}'>
+    <view class='showToast'>
+        申请提现成功，正在跳转到首页...
+    </view>
+</view>
+<view class='popup2 {{showHide?"show":""}}'>
+    <view class='popup2-container'>
+        <view class='header'>
+            <view class='close' bindtap='close'>×</view>
+            <view class='title'>选择到账银行卡</view> 
+        </view>
+        <scroll-view   style="height:400rpx" scroll-y="true">
+        <view class='bank-item'
+        wx:for="{{bankList}}" 
+        wx:key="*this" 
+        bindtap='chooseBank' 
+        data-index='{{index}}'
+        data-id='{{item.id}}'
+        data-bankNum='{{item.remark}}'
+        data-cardNo='{{item.cardNo}}' 
+        data-bankName='{{item.cardName}}'>
+            <view class='bank-name'>{{item.cardName}}({{item.cardNo}})</view>
+            <view class='bank-status'>
+                  <image src='../../../images/success.png' class='{{_index==index?"active":"hide"}}'></image>
+            </view>
+             </view>
+        </scroll-view>
+        <!-- 增加银行卡 -->
+        <view class='add-content' bindtap='redirect'>
+            <view class='bank-icon'>
+                <image src='../../../images/add.png'></image>
+            </view>
+            <view class='bank-names'>使用新卡提现</view>
+            <view class='bank-status'>
+                  >
+            </view>
+        </view>
+    </view>
+</view>
+
+<!--测试服务通知-->
+<!-- <form bindsubmit="form" report-submit='true' >
+    <button form-type="submit" class='xx'>
+        <text>发送</text>
+    </button>
+</form> -->

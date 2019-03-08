@@ -1,0 +1,21 @@
+<!--pages/fund/fund.wxml-->
+<!-- 基金支付牌照清单 -->
+<view class='container'>
+    <!-- 搜索框 -->
+    <view class='header'>
+      <view class='search-bg'>
+        <form bindsubmit="searchSubmit" action="">
+            <image src="../../../images/search.png" class='search-image'></image>
+            <input placeholder="基金支付详情"  class="keyword" bindconfirm="searchProduct" ></input>
+        </form>
+      </view>   
+    </view>
+    <view class='search-list'>
+        <view class='search-item' wx:for="{{jijinpayList}}" wx:key="*this" bindtap='detail' data-id='{{item.id}}'>
+              <view class='item-lt'>{{item.postName}}</view>
+              <view class='item-rt'>></view>
+        </view>
+    </view>
+    <view class='more' hidden="{{isLoading}}">{{loading}}</view>
+</view>
+

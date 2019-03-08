@@ -1,0 +1,51 @@
+/* pages/wallet/wallet.wxss */
+.header{
+  height: 130rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  line-height: 130rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #383838;
+}
+
+.btn-box{
+  height: 80rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.btn{
+  margin: 0;
+  height: 80rpx;
+  width: 300rpx;
+  background: #374256;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.btn:active{
+  opacity: .9;
+}
+.recordList{
+  width: 680rpx;
+  margin: 0 auto;
+  margin-top: 42rpx;
+}
+.item{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f0f0;
+  font-size: 28rpx;
+  color: #585858;
+}
+.tishi,.more{
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #9f9f9f;
+}

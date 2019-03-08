@@ -1,0 +1,35 @@
+/* pages/Inventory-list/Inventory-list.wxss */
+.list{
+  width: 750rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.company{
+  width: 680rpx;
+  height: 120rpx;
+  padding: 0 36rpx;
+  border-bottom: 2rpx solid #f4f2f2;
+  line-height: 120rpx;
+  color: #383838;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.right{
+  width: 15rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.right image{
+  width: 100%;
+  height: 100%;
+}
+
+.lode{
+  text-align: center;
+  font-size: 28rpx;
+  color: #9f9f9f;
+   margin-top: 30rpx;
+   line-height: 100rpx;
+}

@@ -1,0 +1,29 @@
+<!--pages/crossborderdeList/crossborderdeList.wxml-->
+<view class='container'>
+<view class='title'>
+    共查到 {{count}}条数据
+  </view>
+  <view class='ticketList-item' wx:for="{{kuajingwanhui}}" wx:key="*this" bindtap=''>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>企业名称</view>
+      </view>  
+      <view class='item-content'>
+          {{item.compayName}} 
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>范围</view>
+      </view>
+      <view class='item-content'>
+          {{item.compayRange}}
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>地区</view>
+      </view>
+      <view class='item-content'>
+          {{item.compayAdress}}
+      </view>
+  </view>
+</view>

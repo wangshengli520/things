@@ -1,0 +1,6 @@
+<!--pages/memberJM/memberJM.wxml-->
+<view class='btn-box'>
+    <view class='btn1' bindtap='navToHY'>成为支付好帮手VIP</view>
+    <view class='btn2' bindtap='navToHY'>赚积分,免费开通会员</view>
+</view>
+<view class='btn-bottom' bindtap='navToHY'>立即开通企业版,获得AI雷达超级功能</view>

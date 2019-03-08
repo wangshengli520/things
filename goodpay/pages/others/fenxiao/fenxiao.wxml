@@ -1,0 +1,42 @@
+<!--pages/personal/personal.wxml-->
+<!-- 我的 -->
+<view class='container'>
+   <view class="personl-top">
+     <view class='userInfo'>
+        <view class='user-text'>
+            <view class='user-item'>累计收益</view>
+            <view class='user-item money' bindtap='overPerson'>￥{{money}}</view>
+        </view>
+       
+    </view>
+   </view>
+    <view class='menu'>
+      <view class="user-group">
+            <ul>
+              <li  bindtap='chooseMember' class="{{status=='0'?'active':''}}">我的推荐<text class='tuijian_member'>({{memberCount}}人)</text></li>
+              <li  bindtap='chooseMoney' class="{{status=='1'?'active':''}}">收益记录<text class='tuijian_money'>({{money}}元)</text></li> 
+            </ul>
+        </view>
+       <view class='product-name' wx:for="{{firstList}}" wx:key="*this" bindtap='navToFb' data-id='{{item.id}}'>
+       <block wx:if="{{status==0}}">
+        <view class='item-img'>
+          <image src='{{item.headimgurl}}' class='left-img'></image>
+        </view>
+        <view class='item-title'>
+            <text>{{item.nickname}}</text>
+            <view class="chanName">{{item.zhiye}} <block wx:if="{{item.zhiye!=''}}"> |</block> {{item.companyName}}</view>
+        </view>
+        </block>
+         <block wx:if="{{status==1}}">
+              <text>{{item.message}}</text>
+         </block>
+    </view>    
+
+
+
+
+
+
+
+    </view>
+</view>

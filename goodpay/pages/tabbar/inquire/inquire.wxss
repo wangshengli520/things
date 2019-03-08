@@ -1,0 +1,69 @@
+/* pages/inquire/inquire.wxss */
+page{
+  height: 100%;
+  width: 750rpx;
+  overflow: hidden;
+}
+.body{
+  width:700rpx;
+  height: 88%;
+  margin: 30rpx auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content:space-between;
+}
+.head{
+  width: 220rpx;
+  height: 140rpx;
+}
+.image{
+  width: 120rpx;
+  height: 85rpx;
+  margin: auto;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.text{
+  display: block;
+  width: 220rpx;
+  font-size: 27rpx;
+  color: #585858;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.footer{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #000;
+  text-align: center;
+  background: linear-gradient(#ccc,#e1e1e1);
+  padding: 10rpx 0;
+}
+/*查询任务导航*/
+.inquire-nav{
+  background: #374256;
+  height: 90rpx;
+  padding-top: 10rpx;
+}
+.inquire-navbox{
+  width: 380rpx;
+  background: #fff;
+  display: flex;
+  font-size:26rpx;
+  text-align: center;
+  margin: 0 auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.inquire-navbox navigator{
+  flex: 1;
+}
+.other-navigator-hover{
+  background: #f85a59;
+  color: #fff;
+}

@@ -1,0 +1,53 @@
+/* pages/Xuanzexukediqu/Xuanzexukediqu.wxss */
+.head{
+  width: 720rpx;
+  height: 60rpx;
+  margin: auto;
+  padding: 0 15rpx;
+  background: #f4f2f2;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #383838;
+}
+.cente{
+  width: 750rpx;
+  height: 100%;
+  border-top: 1rpx solid #e3e3e3;
+}
+.region{
+  width: 235rpx;
+  height: 65rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 65rpx;
+  font-size: 28rpx;
+  color: #444;
+  float: left;
+  margin: 8rpx;
+  position: relative;
+}
+.delete{
+  height: 5rpx;
+  width: 50rpx;
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  line-height: 50rpx;
+}
+.province{
+  width: 750rpx;
+  height: 100%;
+}
+.background{
+  clear: both;
+  margin-top: 20rpx;
+  width: 720rpx;
+  height: 60rpx;
+  background:#faf5f5;
+}
+.active{
+  background: #4aa7fd;
+  color: #fff;
+}
+
+

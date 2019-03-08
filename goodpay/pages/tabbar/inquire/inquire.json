@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查询系统",
+  "usingComponents": {
+    "tabbar": "../../../tabbarComponent/tabbar"
+  }
+}

@@ -1,0 +1,36 @@
+/* pages/myQR/myQR.wxss */
+.head{
+  width: 680rpx;
+  margin: auto;
+  margin-top: 45rpx; 
+}
+.image{
+  width: 570rpx;
+  height: 540rpx;
+  margin: auto;
+}
+.image image{
+  width: 100%;
+  height: 100%;
+}
+.text{
+  width: 570rpx;
+  margin: auto;
+  line-height: 50rpx;
+  margin-top: 45rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #383838;
+}
+.invite_onshar{
+  width: 490rpx;
+  height: 100rpx;
+  background: #374256;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  margin:100rpx auto;
+}
+
+.qcord-produce{width:600rpx;font-size:34rpx;margin: 0 auto;text-align: center}

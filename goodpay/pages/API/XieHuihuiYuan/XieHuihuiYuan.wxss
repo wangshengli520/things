@@ -1,0 +1,44 @@
+/* pages/XieHuihuiYuan/XieHuihuiYuan.wxss */
+.title{
+  height: 120rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #383838;
+}
+.userInput{
+  height: 80rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  font-size: 32rpx;
+  color: #383838;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userInput-lt{
+  font-size: 32rpx;
+  width: 130rpx;
+}
+.userInput-rt{
+  height: 100%;
+  width:580rpx;
+  font-size: 26rpx;
+  border-bottom: 3rpx solid #585858;
+  text-indent: 10rpx;
+}
+.btn{
+  height: 84rpx;
+  width: 680rpx;
+  margin: auto;
+  margin-top: 300rpx;
+  background: #374256;
+  color: #fff;
+  line-height: 84rpx;
+  font-size: 32rpx;
+}
+.btn:active{
+  opacity: .9;
+}

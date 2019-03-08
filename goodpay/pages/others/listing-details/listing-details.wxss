@@ -1,0 +1,30 @@
+/* pages/listing-details/listing-details.wxss */
+.container{
+  margin-top: 20rpx;
+}
+.item-title{
+  height: 70rpx;
+  width: 680rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35rpx;
+}
+.sign{
+  height: 20rpx;
+  width: 20rpx;
+  background: #374256;
+}
+.sign-title{
+  width: 648rpx;
+  font-size: 32rpx;
+  color: #374256;
+}
+.item-content{
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #383838;
+  border-bottom: 1rpx solid #f8f8f8;
+  padding: 0 35rpx;
+  padding-bottom: 20rpx;
+}

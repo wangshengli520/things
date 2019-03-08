@@ -1,0 +1,7 @@
+<!--pages/myQR/myQR.wxml-->
+<!-- 我的二维码 -->
+<view class='head'>
+    <view class='image'><image src='{{QRUrl}}'></image></view>
+    <view class='text'>截图此二维码并转发到朋友圈，邀请好友一起来使用吧！</view>
+    <button class='invite_onshar' data-name="shareBtn" open-type="share">分享</button>
+</view>

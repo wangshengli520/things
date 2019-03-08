@@ -1,0 +1,84 @@
+<view id="bottom">
+<!--支付头条详情-->
+<view class="hl-header">
+    <view class="hl-headertit">
+        {{article.articleTitle}}
+    </view>
+    <view class="hl-headerbox">
+        <view class="hl-headerdate">发布时间:{{article.createDate}}</view>
+        <!-- <view class="hl-headercard">发布者名片</view>
+        <view class="hl-headerbtn"><button open-type="share">分享</button></view>       -->
+    </view>
+</view>
+<!--支付名片-->
+<!--内容详情-->
+<view class="hl-text">
+    <import src="../../../wxParse/wxParse"/>
+    <template is="wxParse" data="{{wxParseData:ar.nodes}}"/>
+    <!-- <view class="hl-views">
+        浏览量：343
+    </view> -->
+</view>
+<!--立刻分享-->
+<!-- <view class="hl-quickly">
+    <view>
+        <image src="../../../images/hl-share.png" mode="widthFix"></image>
+        <text>已阅，立刻分享</text>
+    </view>
+</view> -->
+<!--热门新闻-->
+<!-- <view class="hotnews">
+    <view class="hotnews-tit">热门新闻</view>
+    <view class="hotnews-list">
+        <view class="hotnews-listl">
+            <image src="../../../images/hotnews-img1.png"></image>
+        </view>
+        <view class="hotnews-listr clearfix">
+            <view>看头发就知道身体好不好看头发就知道身体好不好看头发</view>
+            <view class="hotnews-listrdate">
+                <image src="../../../images/hotnews-img2.png" mode="widthFix"></image>
+                <text>10-23</text>
+                <image src="../../../images/hotnews-img3.png" mode="widthFix"></image>
+                <text>5</text>
+            </view>
+        </view>
+    </view>
+    <view class="hotnews-list">
+        <view class="hotnews-listl">
+            <image src="../../../images/hotnews-img1.png"></image>
+        </view>
+        <view class="hotnews-listr clearfix">
+            <view>看头发就知道身体好不好看头发就知道身体好不好看头发</view>
+            <view class="hotnews-listrdate">
+                <image src="../../../images/hotnews-img2.png" mode="widthFix"></image>
+                <text>10-23</text>
+                <image src="../../../images/hotnews-img3.png" mode="widthFix"></image>
+                <text>5</text>
+            </view>
+        </view>
+    </view>
+</view> -->
+<!--支付头条评论-->
+<!-- <view class="hl-com">
+    <view class="hl-comtit">
+        <view class="hl-comtitl">评论</view>
+        <view class="hl-comtitr">5条评论</view>
+    </view>
+    <view class="hl-combox">
+        <view class="hl-comlist">
+            <view class="hl-comlisttop">
+                <view class="hl-comlisttopl">
+                    <image src="../../../images/task-img1.jpg"></image>
+                </view>
+                <view>
+                    <view>圣女不败</view>
+                    <view class="hl-comlisttopr">
+                        <image src="../../../images/hotnews-img2.png" mode="widthFix"></image>
+                        <view>10-25</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view> -->
+</view>

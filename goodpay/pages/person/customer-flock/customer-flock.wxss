@@ -1,0 +1,26 @@
+/* pages/customer-flock/customer-flock.wxss */
+@import "../../../utils/wxParse/wxParse.wxss";
+.head{
+  width: 680rpx;
+  margin: auto;
+  margin-top: 45rpx; 
+}
+.image{
+  width: 570rpx;
+  height: 540rpx;
+  margin: auto;
+}
+.image image{
+  width: 100%;
+  height: 100%;
+}
+.text{
+  width: 570rpx;
+  height: 90rpx;
+  margin: auto;
+  line-height: 90rpx;
+  margin-top:60rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #383838;
+}

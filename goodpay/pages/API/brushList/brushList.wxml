@@ -1,0 +1,32 @@
+<!--pages/brushList/brushList.wxml-->
+<view class='header-content'>
+  <view class='head'>
+      <image src='../../../images/search.png' class='image'></image>
+      <form bindsubmit="formSubmit">
+          <input class='input' 
+          placeholder='请输入关键字进行搜索'
+          bindblur="bindblur"
+          name="keyword"
+          bindconfirm="searchProduct"
+          value='{{inputValue}}'
+          placeholder-class='inputClass'></input>
+      </form>
+  </view>
+   <view class='tips'>
+      此类查询可包括:二清、手刷mPOS黑名单等
+   </view>
+    <view class='th'>
+          <view class='td'>品牌名称</view>
+          <view class='td'>是否黑名单</view>
+          <view class='td'>所属支付机构</view>
+      </view>
+
+</view>
+  <view class='brushList'>
+      <view class='brushList-item' wx:for="{{listShoushua}}" wx:key="*this" data-id='{{item.id}}' data-content='{{item.content}}' bindtap='navToXQ'>
+              <view class='td'>{{item.blackTitle}}</view>
+              <view class='td'>{{item.content==0?"黑名单":"非黑名单"}}</view>
+              <view class='td'>{{item.remark}}</view>
+      </view>
+       <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+  </view>

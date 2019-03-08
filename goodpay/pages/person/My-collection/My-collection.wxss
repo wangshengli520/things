@@ -1,0 +1,72 @@
+/* pages/My-collection/My-collection.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    height: 90rpx;
+    line-height:90rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 50%;
+    color: #585858;
+}
+.swiper-text{
+  border-bottom: 5rpx solid #4bca55;
+  padding:0 50rpx 20rpx 50rpx;
+}
+.first-container,.second-container{
+  height: 1100rpx;
+} 
+.hidden {
+    display: none;
+}
+.zanwu{
+  height: 100rpx;
+  width: 750rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color:#585858;
+  line-height: 100rpx;
+}
+.lode{
+  text-align: center;
+  font-size: 28rpx;
+  color: #9f9f9f;
+  line-height: 80rpx;
+}
+.head{
+  height: 120rpx;
+  width: 700rpx;
+  padding:0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.cardInfo{
+  width: 500rpx;
+  height: 120rpx;
+  color: #383838;
+  font-size: 36rpx;
+  line-height: 120rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.button{
+  height: 80rpx;
+  width: 160rpx;
+  background: #e9464c;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.button:active{
+  opacity: .8;
+}

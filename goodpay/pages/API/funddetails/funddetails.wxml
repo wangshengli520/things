@@ -1,0 +1,81 @@
+<!--pages/funddetails/funddetails.wxml-->
+<!-- 基金支付牌照详情 -->
+<view class='container'>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>机构名称</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postName}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>业务范围</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postRange}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>网址</view>
+    </view>
+    <view class='item-content'>
+         {{jijinpay.postNet}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>联系地址</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postAddress}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>电话</view>
+    </view>
+    <view class='item-content'>
+         {{jijinpay.postPhone}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>首次备案时间</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postFirstTime}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>监督银行</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postBank}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>监督指定部门</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postDept}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>监督银行联系地址</view>
+    </view>
+    <view class='item-content'>
+          {{jijinpay.postBankAddress}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>监督银行联系电话</view>
+    </view>
+    <view class='item-content'>
+         {{jijinpay.postBankPhone}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>合作的基金销售机构</view>
+    </view>
+    <view class='item-content'>
+         {{jijinpay.postBackDept}}
+    </view>
+</view>

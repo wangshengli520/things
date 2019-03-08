@@ -1,0 +1,39 @@
+<!--pages/listing-details/listing-details.wxml-->
+<!-- 检查要点清单详情 -->
+<view class='container'>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>检查对象</view>
+    </view>
+    <view class='item-content'>
+          {{checkList.checkObject}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>检查内容</view>
+    </view>
+    <view class='item-content'>
+          {{checkList.checkContent}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>检查方法</view>
+    </view>
+    <view class='item-content'>
+         {{checkList.checkMethod}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>检查依据</view>
+    </view>
+    <view class='item-content'>
+          {{checkList.checkDepend}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>处罚依据</view>
+    </view>
+    <view class='item-content'>
+          {{checkList.checkBecause}}
+    </view>
+</view>

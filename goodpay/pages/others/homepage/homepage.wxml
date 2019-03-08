@@ -1,0 +1,6 @@
+<!--pages/homepage/homepage.wxml-->
+<view class='logo-content'>
+   <image src='../../../images/Qr code.png'></image>
+</view>
+<view class='warrant'>需要您的授权才能使用哦！</view>
+ <button  wx:if="{{canIUse}}" class='warrant-btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">立即授权</button>

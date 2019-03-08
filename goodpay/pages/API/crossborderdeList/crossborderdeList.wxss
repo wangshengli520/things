@@ -1,0 +1,50 @@
+/* pages/crossborderdeList/crossborderdeList.wxss */
+page{
+  background: #f8f8f8;
+}
+.title{
+  height: 100rpx;
+  width: 720rpx;
+  padding: 0 15rpx;
+  line-height: 100rpx;
+  color: 3383838;
+  font-size: 32rpx;
+  background: #f8f8f8;
+  border-bottom: 1rpx solid #f6f6f6;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container{
+  padding-top: 100rpx;
+}
+.ticketList-item{
+  width: 680rpx;
+  padding: 0 35rpx;
+  margin-bottom: 28rpx;
+  background: #fff;
+}
+.item-title{
+  height: 70rpx;
+  width: 680rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign{
+  height: 20rpx;
+  width: 20rpx;
+  background: #374256;
+}
+.sign-title{
+  width: 648rpx;
+  font-size: 32rpx;
+  color: #374256;
+}
+.item-content{
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #383838;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}

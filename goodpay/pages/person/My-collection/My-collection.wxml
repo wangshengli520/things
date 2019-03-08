@@ -1,0 +1,38 @@
+<!--pages/My-collection/My-collection.wxml-->
+<!-- 我的收藏 -->
+<view class="swiper-tab">
+    <view class="swiper-tab-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav" wx:key="*this">
+          <text class="navbar-text {{currentNavbar==idx ? 'swiper-text' : ''}}">{{item}}</text>
+    </view>
+</view>
+<!-- 发布栏 -->
+    <scroll-view class='first-container {{currentNavbar==0 ? "" : "hidden"}}' scroll-y="true" bindscrolltolower="pullUpLoad">
+        <block wx:if="{{collectionList.length==0}}">
+            <view class='zanwu'>暂无收藏快点去收藏吧！</view>
+        </block>
+        <block wx:else>
+              <view class='head' wx:for="{{collectionList}}" wx:key="this">
+                <view class='cardInfo' bindtap='navToCardUrl' data-objectid='{{item.objectid}}' data-relName='{{item.relName}}'>
+                      {{item.relName}}的名片
+                </view>
+                <button class='button' bindtap='delRows' data-id='{{item.id}}' data-index='{{index}}'>删除</button>
+              </view>
+              <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+        </block> 
+    </scroll-view>
+    <!-- 服务人员页面 -->
+  <scroll-view class='second-container {{currentNavbar==1 ?"" : "hidden"}}' scroll-y="true"  bindscrolltolower="pullUpLoad">
+        <block wx:if="{{collectionList.length==0}}">
+            <view class='zanwu'>暂无收藏快点去收藏吧！</view>
+        </block>
+        <block wx:else>
+              <view class='head' wx:for="{{collectionList}}" wx:key="this">
+                <view class='cardInfo' bindtap='navToFb' data-objectid='{{item.objectid}}'>
+                     <text class='item-title'><block wx:if="{{item.isLight==1||item.isTop==1}}">{{item.isLight==1?"【曝光】":"【置顶】"}}{{item.title}}</block><block wx:else><text style='padding-left: 30rpx'> {{item.title}}</text></block>
+                     </text>
+                </view>
+                <button class='button' bindtap='delRows' data-id='{{item.id}}' data-index='{{index}}'>删除</button>
+              </view>
+              <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+        </block> 
+  </scroll-view>

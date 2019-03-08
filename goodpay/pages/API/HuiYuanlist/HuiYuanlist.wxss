@@ -1,0 +1,65 @@
+/* pages/HuiYuanlist/HuiYuanlist.wxss */
+.header{
+  height: 162rpx;
+  width: 750rpx;
+  background: #f6f2ef;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.title{
+  height: 80rpx;
+  width: 750rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #666;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e5d8ce;
+}
+.rows,.list-rows{
+  height: 80rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  line-height: 80rpx;
+  color: #333;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e5d8ce;
+}
+.list{
+  margin-top:160rpx; 
+}
+.left{
+  width: 499rpx;
+  height: 100%;
+  border-right: 1rpx dashed #e5d8ce;
+}
+.right{
+  width: 250rpx;
+  height: 100%;
+  text-align: center;
+}
+.left-item{
+  width: 499rpx;
+  height: 100%;
+  border-right: 1rpx dashed #e5d8ce;
+  text-align: left;
+  text-indent: 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.right-item{
+  width: 250rpx;
+  height: 100%;
+  text-align: left;
+  text-indent: 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+
+
+

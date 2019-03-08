@@ -1,0 +1,25 @@
+<!--pages/MCC-query/MCC-query.wxml-->
+<!-- MCC查询 -->
+<view class='title'>查询MCC码或商品类别名称</view>
+<!-- 搜索 -->
+
+<view class='head'>
+<form bindsubmit="searchSubmit" action="">
+  <image src='../../../images/search.png' class='image'></image>
+  <input class='input' 
+  placeholder='请输入MCC或者商品名称进行查询'
+  bindblur="bindblur"
+  value='{{inputValue}}' 
+  bindinput='searchProduct'></input>
+</form>
+</view>
+<button class='button' bindtap='showsearch'>查询</button>
+<!-- MCC码 -->
+<view class='foot' hidden="{{flag}}">
+   <view class='text' wx:for="{{mccList}}" wx:key="*this">
+       <view>MCC码：{{item.mccCode}}</view>
+       <view>商户列别名称：{{item.mccName}}</view>
+       <view>信用卡积分：{{item.mccScore}}</view>
+   </view>
+</view>
+

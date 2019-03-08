@@ -1,0 +1,38 @@
+<!--导航-->
+<view class="inquire-nav">
+    <view class="inquire-navbox">
+        <navigator
+            url="/pages/tabbar/inquire/inquire"
+            open-type="switchTab"
+            class="other-navigator-hover"
+        >
+        查询系统
+        </navigator>
+        <navigator
+            url="/pages/tabbar/task/task"
+            open-type="navigate"
+        >
+        任务系统
+        </navigator>
+    </view>
+</view>
+<!-- 查询列表  -->
+<view class='body'>
+   <view class='head' 
+   wx:for="{{imgUrls}}" 
+   wx:for-item="item"
+   bindtap='chooseSearch' 
+   data-id='{{item.id}}' 
+   data-url='{{item.url}}'
+   wx:key="*this">
+      <view class='image'>
+          <image src="{{item.item}}"></image>
+      </view>
+       <view class='text'>{{item.name}}</view>
+   </view>
+</view>
+<view class='footer'>若您在查询中遇到任何问题，请联系我们：exinpay（微信）</view>
+<!-- tabbar -->
+<view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

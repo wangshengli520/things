@@ -1,0 +1,12 @@
+<!--pages/I-release/I-release.wxml-->
+<!-- 我的发布 -->
+<block wx:if="{{cooperationList.length==0}}">
+    <view class='zanwu'>暂无发布赶快发布吧！</view>
+</block>
+<block wx:else>
+    <view class='head' wx:for="{{cooperationList}}" wx:key="*this" bindtap='navToFBD' data-id='{{item.id}}'>
+      <block wx:if="{{item.isTop==1||item.isLight==1}}">【{{item.isTop==1?"置顶":"曝光"}}】{{item.title}}</block>
+      <block wx:else>{{item.title}}</block>
+    </view>
+</block>
+

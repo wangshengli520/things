@@ -1,0 +1,39 @@
+<!--pages/recharge/recharge.wxml-->
+<!-- 充值页面 -->
+<form bindsubmit="Recharge">
+<view class='recharge-container'>
+    <view class='recharge'>充值</view>
+     <view class='denomination-content'>
+        <view class='{{index==i?"active-item":"denomination-item"}}' 
+        wx:for="{{denominationList}}"
+        wx:key="*this" 
+        data-val='{{item}}'
+        data-i='{{index}}' 
+        bindtap='changeVal'>
+              {{item}}
+        </view>
+    </view>
+    <view class='input'>
+        <input class='user-input' 
+        type="number" 
+        placeholder="{{val}}" 
+        bindinput='changeInput'
+        value='{{userInput}}' 
+        bindfocus="bindfocus"></input>
+        <view class='menoy'>元</view>
+    </view> 
+</view>
+<view class='payment'>
+    <view class='pay-header'>支付方式</view>
+    <view class='pay-type'>
+          <view class='weix-content'>
+            <image src='../../images/weix.png' class='weix-img'></image>
+              <text class='weix-text'> 微信</text>
+          </view>
+          <view class='success'>
+              <image src='../../images/success.png'></image>
+          </view>
+    </view>
+</view>
+<button  class='btn' formType="submit">支付{{btnVal}}元</button >
+</form>

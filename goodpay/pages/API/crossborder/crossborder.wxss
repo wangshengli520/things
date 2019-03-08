@@ -1,0 +1,52 @@
+/* pages/crossborder/crossborder.wxss */
+.title{
+  height: 120rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #383838;
+}
+.userInput{
+  height: 80rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  border-bottom: 3rpx solid #585858;
+  font-size: 32rpx;
+  color: #383838;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userInput-lt{
+  font-size: 32rpx;
+}
+.userInput-rt{
+  height: 100%;
+  width: 512rpx;
+  font-size: 26rpx;
+  text-indent: 10rpx;
+}
+.date{
+  height: 100rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #383838;
+  line-height: 100rpx;
+  margin-top: 40rpx;
+}
+.btn{
+  height: 84rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  margin-top: 230rpx;
+  background: #374256;
+  color: #fff;
+  line-height: 84rpx;
+  font-size: 32rpx;
+}
+.btn:active{
+  opacity: .9;
+}

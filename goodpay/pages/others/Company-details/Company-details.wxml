@@ -1,0 +1,13 @@
+<!--pages/Company-details/Company-details.wxml-->
+<!-- 企业舆情监控详情 -->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class='head'>{{qiyeyuqingList.title}}</view>
+<view class='center'>
+   <view><text decode="{{true}}" space="{{true}}">{{qiyeyuqingList.resource}}&ensp;&ensp;{{qiyeyuqingList.reporter}}</text> </view>
+   <view>1小时前</view>
+   <view class='image'><image src='../../images/yan.png'></image> {{qiyeyuqingList.viewer}}</view>
+</view>
+<!-- 文字描述 -->
+<view class='text'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

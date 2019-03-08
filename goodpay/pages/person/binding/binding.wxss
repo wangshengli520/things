@@ -1,0 +1,72 @@
+/* pages/binding/binding.wxss */
+.header{
+  height: 230rpx;
+  width: 640rpx;
+  line-height: 230rpx;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 34rpx;
+  color: #383838;
+}
+.item-menu{
+  height:120rpx;
+  width:640rpx;
+  display:flex;
+  justify-content:space-between;
+  margin:0 auto;
+  line-height:130rpx;
+  font-size:30rpx;
+  color:#383838;
+
+}
+.item-content{
+  width: 474rpx;
+  border-bottom: 1rpx solid #9f9f9f;
+  position: relative;
+}
+.inputView{
+  width: 444rpx;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+.userInput{
+  color:#383838;
+}
+.arrow{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 40rpx;
+  color: #a9a7a7;
+  z-index: -1; 
+}
+.justify{
+  width: 120rpx;
+  text-align: justify; 
+}
+.justify>text{
+   display: inline-block /* Opera */;
+   padding-left: 100%;
+}
+.picker{
+  text-indent: 30rpx;
+  line-height: 140rpx;
+  display: flex;
+  align-items: center;
+}
+.btn{
+  height: 94rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  border: none;
+  background: #374256;
+  color: #fff;
+  font-size:34rpx;
+  line-height: 94rpx;
+  margin-top: 100rpx;
+}
+.btn:active{
+  opacity: .9;
+}

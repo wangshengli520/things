@@ -1,0 +1,87 @@
+<!--pages/information/information.wxml-->
+<!-- 找合作 -->
+<!-- 搜索 -->
+<view class='head'>
+                <form bindsubmit="searchSubmit" action="">
+                  <image src='../../images/search.png' class='image'></image>
+                  <input class='input' placeholder='搜索合作意向' bindconfirm="searchProduct" ></input>
+                </form>
+</view>
+<!-- 列表导航 -->
+<view class='swiper'>
+   <view class="details {{currentTab==3 ? 'on' : ''}}" data-current="0" bindtap="swichNav">支付要文</view>
+   <view class="details {{currentTab==3 ? 'on' : ''}}" data-current="1" bindtap="swichNav">金融口子</view>
+   <view class="details {{currentTab==3 ? 'on' : ''}}" data-current="2" bindtap="swichNav">财经头条</view>
+   <view class="details {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">信贷学堂</view>
+</view>
+<!-- 列表 -->
+<swiper class='list' current="{{currentTab}}" duration="200" bindchange="swiperChange"> 
+   <!-- 支付要文 -->
+    <swiper-item> 
+        <scroll-view class='list' scroll-y>
+          <view class='list-name' wx:for="{{item}}" >
+             <view class='log'><image src='../../images/xinxi.png'></image></view>
+             <view class='headline'>
+               <view class='text'>华西村负债389亿元昔第一村到底经历了什么？</view>
+               <view class='text-name'>
+                  <text>网易财经</text>
+                  <text class='text-male'>立方</text>
+                  <text class='text-woma'>张艳</text>
+                  <text class='data'>一小时前</text>
+               </view>
+             </view>
+          </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 金融口子 -->
+    <swiper-item> 
+        <scroll-view class='list' scroll-y>
+          <view class='list-name' wx:for="{{item}}" >
+             <view class='log'><image src='../../images/xinxi.png'></image></view>
+             <view class='headline'>
+               <view class='text'>华西村负债389亿元昔第一村到底经历了什么？</view>
+               <view class='text-name'>
+                  <text>网易财经</text>
+                  <text class='text-male'>立方</text>
+                  <text class='text-woma'>张艳</text>
+                  <text class='data'>一小时前</text>
+               </view>
+             </view>
+          </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 财经头条 -->
+    <swiper-item> 
+        <scroll-view class='list' scroll-y>
+          <view class='list-name' wx:for="{{item}}" >
+             <view class='log'><image src='../../images/xinxi.png'></image></view>
+             <view class='headline'>
+               <view class='text'>华西村负债389亿元昔第一村到底经历了什么？</view>
+               <view class='text-name'>
+                  <text>网易财经</text>
+                  <text class='text-male'>立方</text>
+                  <text class='text-woma'>张艳</text>
+                  <text class='data'>一小时前</text>
+               </view>
+             </view>
+          </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 信贷学堂 -->
+    <swiper-item> 
+        <scroll-view class='list' scroll-y>
+          <view class='list-name' wx:for="{{item}}"  >
+             <view class='log'><image src='../../images/xinxi.png'></image></view>
+             <view class='headline'>
+               <view class='text'>华西村负债389亿元昔第一村到底经历了什么？</view>
+               <view class='text-name'>
+                  <text>网易财经</text>
+                  <text class='text-male'>立方</text>
+                  <text class='text-woma'>张艳</text>
+                  <text class='data'>一小时前</text>
+               </view>
+             </view>
+          </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

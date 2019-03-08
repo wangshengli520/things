@@ -1,0 +1,9 @@
+<!--pages/Payment-list/Payment-list.wxml-->
+<!-- 支付牌照查询列表 -->
+<view class='list'>
+   <view class='company' wx:for="{{paypaizhaoList}}" bindtap='navTodetails' data-id='{{item.id}}' wx:key="*this">
+     <text>{{item.companyName}}</text>
+     <view class='right'><image src='../../../images/3.png'></image></view>
+   </view>
+<view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</view>

@@ -1,0 +1,146 @@
+<!--导航-->
+<view class="inquire-nav">
+    <view class="inquire-navbox">
+        <navigator
+            url="/pages/tabbar/inquire/inquire"
+            open-type="switchTab"
+        >
+        查询系统
+        </navigator>
+        <navigator
+            url="/pages/tabbar/task/task"
+            open-type="navigate"
+            class="other-navigator-hover"
+        >
+        任务系统
+        </navigator>
+    </view>
+</view>
+<!--昵称-->
+<view class="task-nickname">
+    <image src="{{member.headimgurl}}"></image>
+    <text>{{member.nickname}}</text>
+</view>
+<!--金币余额-->
+<view class="task-coins">
+    <view class="task-yu">
+        <view><text>{{member.money}}</text>元</view>
+        <view class="task-jintext">现金金额</view>
+        <view class="task-line"></view>
+    </view>
+    <view class="task-jin">
+        <view><text>{{member.gold}}</text>积分</view>
+        <view><text class="task-jintext">剩余积分</text><image src="../../../images/task-wen.png"></image></view>
+    </view>
+</view>
+<!--提现-->
+<view class="task-withdrawal">
+    <view class="task-withone">
+        <navigator url="/pages/person/putforward/putforward">
+            <image src="../../../images/task-img2.jpg"></image>
+            <view>提现兑换</view>
+        </navigator>
+    </view>
+    <view class="task-withone">
+        <navigator>
+            <image src="../../../images/task-img3.jpg"></image>
+            <view>收入记录</view>
+        </navigator>
+    </view>
+    <view class="task-withone">
+        <navigator url="/pages/person/Invitation/Invitation">
+            <image src="../../../images/task-img4.jpg"></image>
+            <view>邀请好友</view>
+        </navigator>
+    </view>
+</view>
+<!--签到模块-->
+<view class="signin">
+    <view class="sigin-top">
+        <view class="sigin-topl">
+            <view class="sigin-topltext">{{member.gold}}积分</view>
+            <view class="sigin-topltextt">明日签到可得{{mingintegral[signqueryList.length].award}}积分</view>
+        </view>
+        <view class="sigin-topr">
+            已签到
+        </view>
+    </view>
+    <view class="sigin-cen">
+        <view class="sigin-centxt"
+            wx:for="{{signList}}"
+            wx:key="{{index}}"
+        >
+            <view>{{signList[index].num}}</view>
+            <!--思路  判断索引值是否等于返回的值 -->
+            <view bind:tap="onRetroactive" data-id="{{index}}">
+                <image src="{{ signTypeList[index] == true ? signList[0].signurl : signList[index].signurl}}"></image>
+            </view>
+            
+            <view class="sigin-line"></view>
+        </view>
+    </view>
+    <view class="singin-bot" bind:tap="onToInvitation">
+        <image src="../../../images/sigin-img8.jpg"></image>
+    </view>
+</view>
+<!--新手任务-->
+<!-- <view class="newtask">
+    <view class="newtask-box">
+        <view class="newtask-boxtxt">新手任务</view>
+        <view class="newtask-list clearfix">
+            <view class="newtask-listl clearfix">
+                <image src="../../../images/newtask-img.jpg"></image>
+                <view class="newtask-listlr">
+                    <view>新人尝鲜+1元</view>
+                    <view class="newtask-listlrr">认真阅读3篇文章</view>
+                </view>
+            </view>
+        </view>
+        <view class="newtask-list clearfix">
+            <view class="newtask-listl clearfix">
+                <image src="../../../images/newtask-img1.jpg"></image>
+                <view class="newtask-listlr">
+                    <view>首次邀请好友</view>
+                    <view class="newtask-listlrr">首次邀请好友奖励26元</view>
+                </view>
+            </view>
+            <view class="newtask-listr">
+                领26元现金
+            </view>
+        </view>
+    </view>
+</view> -->
+<!--日常任务-->
+<view class="newtask-box">
+    <view class="newtask-boxtxt">日常任务</view>
+    <view class="newtask-list clearfix" 
+        wx:for="{{taskList}}" 
+        bind:tap="clickTask"
+        data-i="{{index}}"
+        wx:key="{{index}}"
+        
+    >
+        <view class="newtask-listl clearfix">
+            <image src="{{taskImg[index]}}"></image>
+            <view class="newtask-listlr">
+                <view>{{item.name}}</view>
+                <view class="newtask-listlrr">{{item.memo}}</view>
+            </view>
+        </view>
+        <view>
+            <block wx:if="{{index == 1}}">
+                <button open-type="share" class="newtask-btn" size="{{defaultSize}}">领{{item.award}}元现金</button>
+            </block>
+            <block wx:else>
+                <view class="newtask-listr">
+                    领{{item.award}}元现金
+                </view>  
+            </block>
+        </view>
+    </view>
+</view>
+<!--任务底部-->
+<view class="task-footer">
+    如有疑问请参考
+    <text>赚钱攻略</text>
+</view>

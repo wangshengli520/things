@@ -1,0 +1,13 @@
+<!--pages/brushListdetails/brushListdetails.wxml-->
+<view class='head'>若您在查询中遇到任何问题，请联系我们：exinpay（微信）</view>
+<view class='notice'>
+   <view class='warning'>警告</view>
+   <view class='text'>
+    <view>您查询的品牌（<text>{{shoushua.blackTitle}}</text>）已经列入银联黑名单或无牌支付机构所运营的“二清机”。</view> 
+    <view>如继续使用可能对您的刷卡结算资金<text>带来风险</text>。建议立刻放弃使用。</view>
+   </view>
+</view>
+<view class='list'>类似品牌：</view>
+<view class='brand' wx:for="{{listShoushua}}" wx:key="*this" >
+     <navigator url='../brushListdetails/brushListdetails?id={{item.id}}'>{{item.blackTitle}}</navigator>  
+</view>

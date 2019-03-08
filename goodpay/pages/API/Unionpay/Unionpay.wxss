@@ -1,0 +1,84 @@
+/* pages/Unionpay/Unionpay.wxss */
+
+.head{
+  width: 680rpx;
+  height: 50rpx;
+  margin: auto;
+  margin-top: 60rpx;
+  color: #383838;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.input{
+  width:77%;
+  height: 50rpx;
+  border-bottom: 3rpx solid #ccc;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #9f9f9f;
+}
+.details{
+  width: 540rpx;
+}
+.instin{
+  width: 540rpx;
+  height: 60rpx;
+  border: 1rpx solid #c3c3c3;
+  float: left;
+  border-radius: 10rpx;
+}
+.good{
+  width:495rpx;
+  height: 60rpx;
+  float: left;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  color: #383838;
+  line-height: 60rpx; 
+}
+.left{
+  width: 35rpx;
+  height: 60rpx;
+  float:left;
+  border-left: 2rpx solid #c3c3c3;
+}
+.left image{
+  width: 25rpx;
+  height: 9rpx;
+  margin-left: 5rpx;
+  margin-bottom: 6rpx;
+}
+.button{
+  width: 680rpx;
+  height: 80rpx;
+  margin: auto;
+  margin-top: 130rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background: #374256;
+  border-radius:10rpx;
+  line-height: 80rpx;
+  padding: 0;
+}
+.picker{
+  width:520rpx;
+  height: 50rpx;
+  border-bottom: 3rpx solid #ccc;
+  padding-left: 20rpx;
+  color: #9f9f9f; 
+  font-size: 28rpx;
+}
+.right{
+  width: 15rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  float: right;
+  margin-right:30rpx;
+}
+.right image{
+  width: 100%;
+  height: 100%;
+  transform:rotate(90deg); 
+}

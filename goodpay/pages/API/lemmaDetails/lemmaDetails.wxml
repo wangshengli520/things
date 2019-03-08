@@ -1,0 +1,10 @@
+<!--pages/lemmaDetails/lemmaDetails.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class='header'>
+    <view class='header-content'>
+       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class='source'>
+        来源：{{shuyu.shuyuResource}}
+    </view>
+</view>

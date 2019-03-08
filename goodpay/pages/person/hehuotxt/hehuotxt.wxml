@@ -1,0 +1,4 @@
+<!--合伙人赚钱-->
+<view class="hehuo-text">
+    {{Instructionstext.content}}
+</view>

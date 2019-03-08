@@ -1,0 +1,77 @@
+<!--pages/Release-details/Release-details.wxml-->
+ 
+<!-- 发布详情 -->
+<!-- 顶部标题 -->
+<view class='bg-line'></view>
+<view class='head'>
+  <view class='center'>
+        <view class='log-img'><image src='{{cooperation.headImgUrl}}'></image></view>
+        <view class='log-text'>
+            <view class='log-title'>{{cooperation.title}}</view>
+            <view class='log-job'>{{cooperation.nickName}}</view>
+        </view>
+        <view class='share-content' hidden="true">
+            <image src='../../../images/share.png' class='share-img'></image> 
+             <button class='share-text' data-name="shareBtn" open-type="share">分享</button>
+        </view>
+  </view>
+</view>
+<view class='content'>
+    <view class='content-lt'>
+        <view class='other'>其他</view>
+        <view class='browse'>
+            <image src='../../../images/browse.png' class='browse-img'></image>
+            <text class='browse-num'>{{cooperation.viewer}}</text>
+        </view>
+        <view class='laud' bindtap='addZan'>
+            <image src='../../../images/laud.png' class='browse-img'></image>
+            <text class='browse-num'>{{cooperation.zanNum}}</text>
+        </view>
+    </view>
+    <view class='content-rt'>
+          <view class='content-info'>
+              {{cooperation.article}}
+              <block wx:for="{{cooperation.imgList}}"><image src='{{item}}' data-src="{{item}}" bindtap='previewImage'></image></block>
+          </view>
+          <view class='content-bottom'>
+            <view class='info-time'>{{cooperation.createDate}}</view>
+            <view class='laud-box'>
+                <view class='item-box' bindtap='collect'>
+                  <image src="{{collStatus==''?'../../../images/un-like.png':'../../../images/like.png'}}" class='item-img'></image>
+                    <text class='item-num'>{{cooperation.collNum}}</text>
+                </view>
+                <view class='item-box'>
+                  <image src='../../../images/news.png' class='item-img'></image>
+                  <text class='item-num'>{{cooperation.commNum}}</text>
+                </view>
+            </view>
+          </view>
+          <view class='msg-content' wx:if="{{commList.length>0}}">
+            <view  wx:for="{{commList}}">
+              <view class='triangle'></view>
+              <view class='nickName'>
+                 {{item.nickName}}:
+              </view>
+              <view class='msg-list'>
+                  {{item.content}}
+              </view>
+            </view>
+          </view>   
+          <!-- 评论 -->
+           <form  bindsubmit="formSubmit" > 
+              <view class="release" hidden="{{!releaseFocus}}">
+                  <textarea class="text" name="content"
+                  placeholder-class="input_null"
+                  fixed="true"
+                  value="{{contants}}"
+                  maxlength="-1"
+                  show-confirm-bar="false"
+                  cursor-spacing="15"
+                  auto-height="true"
+                  focus="{{focus}}"
+                  placeholder="回复 {{releaseName}}"></textarea>
+              <button  class="submit"  formType="submit">发送</button>
+              </view>
+           </form>
+    </view>
+</view>

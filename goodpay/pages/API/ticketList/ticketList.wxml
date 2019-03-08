@@ -1,0 +1,53 @@
+<!--pages/ticketList/ticketList.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class='container'>
+  <view class='title'>
+    共查到 {{count}}条数据
+  </view>
+  <view class='ticketList-item' wx:for="{{paypunishList}}" wx:key="*this">
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>企业名称</view>
+      </view>
+      
+      <view class='item-content'>
+          {{item.compayName}}
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>作出行政处罚决定日期</view>
+      </view>
+      <view class='item-content'>
+          {{item.punishDate}}
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>违法行为类型</view>
+      </view>
+      <view class='item-content'>
+          {{item.punishType}}
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>行政处罚内容</view>
+      </view>
+      <view class='item-content'>
+         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>做出行政处罚绝对机关名称</view>
+      </view>
+      <view class='item-content'>
+          {{item.punishDept}}
+      </view>
+      <view class='item-title'>
+          <view class='sign'></view>
+          <view class='sign-title'>公示时间</view>
+      </view>
+      <view class='item-content'>
+          {{item.punishDate}}
+      </view>
+  </view>
+  <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</view>

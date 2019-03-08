@@ -1,0 +1,11 @@
+<!--pages/About Us/About Us.wxml-->
+<!-- 关于我们 -->
+<block wx:if="{{show}}">
+    <view class='zanwu'>{{aboutUs}}</view>
+</block>
+<block wx:else>
+    <view class='head'>关于我们</view>
+    <view class='text'>
+      {{aboutUsText}}
+    </view>
+</block>

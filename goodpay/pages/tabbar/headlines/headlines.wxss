@@ -1,0 +1,51 @@
+/*支付头条*/
+.headlines-main{
+    margin:0rpx 30rpx 0;
+    font-size:30rpx;
+    padding-bottom: 95rpx;
+}
+.headlines-imgm{
+    display: flex;
+    margin: 30rpx 0;
+}
+.headlines-img{
+    width: 224rpx;
+    height: 172rpx;
+    margin-right:10rpx;
+}
+.headlines-one .headlines-bot{
+    margin:30rpx 0 25rpx 0;
+}
+/*.headlines-bot text:first-child{
+    margin-right: 60rpx;
+}
+.headlines-bot text:last-child{
+    float: right;
+    color: #000;
+}*/
+.headlines-bot{
+    overflow: hidden;
+    margin-bottom: 5rpx;
+    margin-top: -25rpx;
+}
+.headlines-bot text{
+    color: #b7b7b7;
+}
+.headlines-list{
+    border-bottom:2rpx solid #dcdcdc;
+}
+.headlines-text{
+    width: 420rpx;
+    float: left;
+}
+.headlines-listimg{
+    float:right;
+    width: 192rpx;
+    height: 146rpx;
+}
+.headlines-list{
+    padding-top: 30rpx;
+}
+.headlines-listt{
+    margin-bottom: 5rpx;
+}

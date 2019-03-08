@@ -1,0 +1,16 @@
+<!--pages/enterprise/enterprise.wxml-->
+<!-- 企业舆情监控列表 -->
+<view class='list'>
+    <view class='list-name' wx:for="{{publicList}}" data-id='{{item.id}}' bindtap='navTodetails'>
+        <view class='log'><image src='{{item.isDelete}}'></image></view>
+        <view class='headline'>
+            <view class='text'>{{item.title}}</view>
+            <view class='text-name'>
+                <text>{{item.resource}}</text>
+                <text class='text-woma'>{{item.reporter}}</text>
+                <text class='data'>{{item.remark}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</view>

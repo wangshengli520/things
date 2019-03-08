@@ -1,0 +1,13 @@
+<!--pages/ticket/ticket.wxml-->
+<!-- 支付机构罚单 -->
+<view class='container'>
+    <view class='title'>
+        查询支付机构历次处罚清单
+    </view>
+    <view class='userInput'>
+        <view class='userInput-lt'>企业名称：</view>
+        <input placeholder="请输入关键字或者企业名称进行查询" class='userInput-rt' bindinput='searchInput'></input>
+    </view>
+    <view class='date'>最近更新日期：{{year}}年{{month}}月{{day}}日</view>
+    <button class='btn' bindtap='search'>查询</button>
+</view>

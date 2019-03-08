@@ -1,0 +1,124 @@
+
+page{
+    height: 100%;/*生效*/
+    background: #f4f4f4;
+}
+.cardd{ 
+    padding-top: 100rpx;
+}
+.cardd-main{
+    width: 650rpx;
+    background: #e0e0e0;
+    margin:0 auto;
+    border:1rpx solid #cdcdcd;
+    border-radius:10rpx;
+    padding-top: 50rpx;
+    overflow: hidden;
+    position: relative;
+}
+.cardd-txt{
+    background: #fff;
+    margin-top: 100rpx;
+}
+.cardd-box{
+    width: 540rpx;
+    height: 290rpx;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    position: relative;
+    padding:30rpx;
+}
+.cardd-name{
+    font-size: 30rpx;
+    font-weight: bold;
+    border-bottom:4rpx solid #5f5f5f;
+    position: absolute;
+}
+.cardd-position{
+    position:absolute;
+    left:200rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    top:35rpx;
+}
+.cardd-positionm{
+    top: 60rpx;
+    position:absolute;
+    left:200rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.cardd-zftxt{
+    position:absolute;
+    color: #f59210;
+    font-weight: bold;
+    right: 20rpx;
+}
+.cardd-image{
+    width: 120rpx;
+    height: 120rpx;
+    bottom: 65rpx;
+    position: absolute;
+    border-radius: 50%;
+}
+.cardd-detail{
+    position: absolute;
+    left:200rpx;
+    bottom: 50rpx;
+    font-size: 25rpx;
+    width: 400rpx;
+    overflow: hidden;
+    color: #757575;
+}
+.cardd-detail view:first-child{
+    color: #000;
+}
+.cardd-text{
+    background: #fff;
+    margin-top: 80rpx;
+    padding: 60rpx 30rpx 70rpx;
+}
+.cardd-text .cardd-textf{
+    font-size: 35rpx;
+}
+.cardd-text view{
+    font-size:30rpx;
+    color: #757575;
+    margin-top:20rpx;
+}
+.cardd-text view text{
+    color: #000;
+}
+.cardd-sl{
+    color: #525252;
+    font-size: 30rpx;
+    float:right;
+    margin-top: 20rpx;
+    margin-right: 10rpx;
+}
+.cardd-san{
+    border-top:24rpx solid #e0e0e0;
+    width:0rpx;
+    border-left:24rpx solid transparent;
+    border-right:24rpx solid transparent;
+    border-bottom:24rpx solid transparent;
+    position:absolute;
+    left: 50%;
+    margin-left: -12rpx;
+    margin-top: 80rpx;
+}
+.cardd-save{
+    width:300rpx;
+    display: flex;
+    margin:50rpx auto;
+    font-size:26rpx;
+    justify-content:space-between;
+}
+.cardd-save image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.cardd-save view{
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+<!--pages/paymentDetails/paymentDetails.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class='header'>
+    <view class='header-content'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class='source'>
+        来源：{{shuyu.shuyuResource}}
+    </view>
+</view>
+<view class='list'>
+    <view class='title'>相关词条：</view>
+    <view class='list-item' 
+    wx:for="{{shuyuList}}" 
+    wx:key="*this"
+    data-title='{{item.shuyuTitle}}'
+    data-id='{{item.id}}' 
+    bindtap='navToXQ'>
+        {{item.shuyuTitle}}
+    </view>
+</view>

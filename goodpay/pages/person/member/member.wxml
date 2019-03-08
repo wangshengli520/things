@@ -1,0 +1,171 @@
+<!--vip页面-->
+<view class="vip-main">
+    <!--vip头部-->
+    <view class="vip-top clearfix">
+        <view class="vip-topl">
+            <image src="{{businessCardList[0].headImgUrl}}"></image>
+        </view>
+        <view class="vip-topr">
+            <view class="vip-toprt">
+                <text>{{businessCardList[0].nickName}}</text>
+                <image src="../../../images/vip-toplimg.jpg"></image>
+            </view>
+            <view class="zxvip"><text decode="nbsp">尊享VIP</text></view>
+        </view>
+    </view>
+    <!--购买兑换vip-->
+    <view class="vip-body">
+        <view class="vip-bodynav">
+            <view class="{{selected?'vip-active':''}}" bind:tap="selected">购买VIP</view>
+            <view class="{{selected1?'vip-active':''}}" bind:tap="selected1">积分换VIP</view>
+        </view>
+        <view class="vip-bmain">
+            <view class="vip-bmaintext" bind:tap="">
+                <text>畅享尊享VIP专属特权+喜马拉雅VIP特权</text>
+                <image src="../../../images/vip-shang.png"></image>
+            </view>
+            <view class="vip-bmainz">
+                <view>
+                    <view class="vip-circle"></view>
+                    附加5省市展示地区
+                </view>
+                <view>
+                    <view class="vip-circle"></view>
+                    曝光、置顶6.88折扣
+                </view>
+                <view>
+                    <view class="vip-circle"></view>
+                    获得商品40%佣金权限
+                </view>
+                <view>
+                    <view class="vip-circle"></view>
+                    公众号POS服务商服务
+                </view>
+                <view>
+                    <view class="vip-circle"></view>
+                    喜马拉雅VIP会员权限
+                </view>
+                <view class="vip-bmainzlast">
+                    <view class="vip-circle"></view>
+                    点我查看更多10大特权
+                </view>
+            </view>
+            <view class="vip-xmain {{selected?'show':'hidden'}}">
+                <view class="vip-xjmain">
+                    <view 
+                        class="vip-xj clearfix {{ index == num ? 'vip-xjactive' : ''}}"
+                        wx:for="{{topList}}"
+                        wx:key="{{index}}"
+                        data-i="{{index}}"
+                        bind:tap = "onvipselect"
+                    >
+                        <view class="vip-xjl">{{item.month}}个月</view>
+                        <view class="vip-xjr">
+                            <text class="vip-xjryuan">{{ index == 0 ? '' : '原价：'+item.money}}</text>
+                            <text class="vip-xjrtext">￥{{item.discountPrice}}</text>   
+                        </view>
+                    </view>
+                </view>
+                <!--微信支付-->
+                <view class="vip-wxpay">
+                    <view class="vip-wxpayl">
+                        <image src="../../../images/vip-wxpayimg1.jpg"></image>
+                        <text>微信支付</text>
+                        <view class="wxpay-tui">推荐</view>
+                    </view>
+                    <view class="vip-wxpayr">
+                        <image src="../../../images/vip-wxpayimg2.jpg"></image>
+                    </view>
+                </view>
+                <!--vip服务协议-->
+                <view class="vip-service">
+                    <view class="vip-servicetit"><text>《尊享VIP服务协议》</text><text>《连续包月服务协议》</text></view>
+                    <view>【再次使用帮助】发现一小程序 <text>或</text>直接搜索-支付好帮手</view>
+                    <view>打造国内专业支付行业综合服务</view>
+                    <view>帮助和反馈</view>
+                </view>
+                <!--确认支付-->
+                <view class="vip-total">
+                    <view class="vip-totall">
+                        总计 <text class="vip-totaltext">￥{{topList[num].discountPrice}}</text>
+                    </view>
+                    <view class="vip-totalr" bindtap='Recharge'>
+                        确认支付
+                    </view>
+                </view>
+            </view>
+            <view class="vip-xmain {{selected1?'show':'hidden'}}">
+                <view class="vip-xjmain">
+                    <view 
+                        class="vip-xj clearfix {{ index == num ? 'vip-xjactive' : ''}}"
+                        wx:for="{{topList}}"
+                        wx:key="{{index}}"
+                        data-i="{{index}}"
+                        bind:tap = "onvipselect"
+                    >
+                        <view class="vip-xjl">{{item.month}}个月</view>
+                        <view class="vip-xjr">
+                            <text class="vip-xjrtext">消耗积分：{{item.integral}}</text>   
+                        </view>
+                    </view>
+                </view>
+                <!--积分消耗-->
+                <view class="vip-integral">
+                    <view class="vip-integrall">
+                        积分余额：{{points.gold}}，本次消耗：{{topList[num].integral}}
+                    </view>
+                    <view class="vip-integralr">
+                        <image src="../../../images/vip-wxpayimg2.jpg"></image>
+                    </view>
+                </view>
+                <!--微信支付-->
+                <view class="vip-wxpay">
+                    <view class="vip-wxpayl">
+                        <image src="../../../images/vip-wxpayimg1.jpg"></image>
+                        <text>微信支付</text>
+                        <view class="wxpay-tui">推荐</view>
+                    </view>
+                    <view class="vip-wxpayr">
+                        <image src="../../../images/vip-wxpayimg2.jpg"></image>
+                    </view>
+                </view>
+                <!--vip服务协议-->
+                <view class="vip-service">
+                    <view class="vip-servicetit"><text>《尊享VIP服务协议》</text><text>《连续包月服务协议》</text></view>
+                    <view>【再次使用帮助】发现一小程序 <text>或</text>直接搜索-支付好帮手</view>
+                    <view>打造国内专业支付行业综合服务</view>
+                    <view>帮助和反馈</view>
+                </view>
+                <!--确认支付-->
+                <view class="vip-total">
+                    <view class="vip-totall">
+                        总计 <text class="vip-totaltext">积分：{{consumptiongold}}</text>
+                            <text class="vip-totaltext">现金：{{consumptionmoney}}</text>
+                    </view>
+                    <view class="vip-totalr" bindtap='Rechargeint'>
+                        确认支付
+                    </view>
+                </view>
+            </view> 
+        </view>
+    </view>
+</view>
+
+
+<!-- 会员充值页面 -->
+<!-- <view class='recharge-container'>
+    <view class='recharge'>充值会员后享身份、购买置顶或曝光享受会员优惠</view>
+    <view class='name'>{{nickname}}</view>
+     <view class='denomination-content'>
+        <view class='{{index==i?"active-item":"denomination-item"}}' 
+        wx:for="{{topList}}"
+        wx:key="*this" 
+        data-val='{{item}}'
+        data-i='{{index}}' 
+        bindtap='changeVal'>
+              {{item.month}}个月
+        </view>
+    </view>
+    <view class='menoy'>{{money}}元</view>
+    <view class='btn' bindtap='Recharge'>立即开通</view>
+</view> -->

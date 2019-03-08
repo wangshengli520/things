@@ -1,0 +1,45 @@
+<!--名片码详情页-->
+<view class="cardd">
+        <!-- <canvas canvas-id='share' style='width:750rpx;height:375rpx;' class="cardcanvas"></canvas> -->
+        <view class="cardd-main">
+            <view class="cardd-box clearfix">
+                <text class="cardd-name">{{businessCard[0].name}}</text>
+                <view class="cardd-position">{{businessCard[0].remark}}</view>
+                <!-- <view class="cardd-positionm">CEO</view> -->
+                <text class="cardd-zftxt">{{businessCard[0].productShort}}</text>
+                <image src="{{businessCard[0].url}}" class="cardd-image"></image>
+                <view class="cardd-detail">
+                    <view>{{businessCard[0].companyName}}</view>
+                    <view>Tel:{{businessCard[0].companyPhone}}</view>
+                    <view>Mail:{{businessCard[0].relName}}</view>
+                    <view>微信：{{businessCard[0].phone}}</view>
+                    <view>公司地址:{{businessCard[0].companyAddress}}</view>
+                </view>
+            </view>
+            <view class="cardd-sl">示例</view>
+            <view class="cardd-san"></view>
+            <view class="cardd-text">
+                <text class="cardd-textf">用于名片印刷</text>
+                <view>
+                    <text>使用场景：</text>
+                    将您的名片专属小程序码印在纸质名片上，您的客户微信扫码就可将名片信息同步至手机
+                </view>
+                <view>
+                    <text>尺寸：</text>
+                    80mm*80mm
+                </view>
+            </view>
+        </view>
+    <!--保存-->
+    <view class="cardd-save">
+        <view class="cardd-email"> 
+            <image src="../../../images/cardd-email.png"></image>
+            <view>发到邮箱</view>
+        </view>
+        <view class="cardd-phone" bindtap='saveImageToPhotosAlbum'>
+            <image src="../../../images/cardd-save.png"></image>
+            <view>保存手机</view>
+        </view>
+    </view>
+</view>
+

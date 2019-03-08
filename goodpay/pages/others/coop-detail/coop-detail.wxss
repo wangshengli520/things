@@ -1,0 +1,120 @@
+page{
+    background: #eeeeee;
+    font-size: 30rpx;
+}
+.header{
+    background: #fff;
+    margin:20rpx;
+    padding:40rpx 20rpx 20rpx 30rpx;
+}
+.head-mlist text{
+    margin-right: 30rpx;
+}
+.head-mlist{
+    margin-bottom:20rpx;
+}
+.header-tit{
+    font-size: 40rpx;
+}
+.header-tittwo{
+    margin-top: 30rpx;
+}
+.head-main{
+    margin-top: 30rpx;
+}
+.head-mlisttit{
+    color: #9a9a9a;
+}
+.head-about{
+    display: flex;
+} 
+.head-aboutxt{
+    width: 500rpx;
+    margin-left: 30rpx;
+    line-height: 40rpx;
+}
+.head-aboutiimg image{
+    width: 150rpx;
+    height: 150rpx;
+}
+.head-aboutiimg{
+    margin-top: 25rpx;
+    height:150rpx;
+    overflow: hidden;
+}
+.coopname{
+    width: 100%;
+    background: #fff;
+    padding:20rpx 20rpx 0;
+    height:130rpx;
+    display: flex;
+}
+.coopname-l image{
+    width: 114rpx;
+    height: 114rpx;
+    border:5rpx solid #d2d0d5;
+    border-radius: 50%;
+}
+.coopname-lm{
+    margin-left: 30rpx;
+}
+.coopname-color{
+    color: #9a9a9a;
+}
+.coopname-r image:first-child{
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align:middle;
+    margin-right: 40rpx;
+}
+.coopname-r image:last-child{
+    width: 45rpx;
+    height: 45rpx;
+    vertical-align:middle;
+}
+.coopname-r{
+    padding-top: 30rpx;
+    margin-left: 50rpx;
+}
+.cooppoint{
+    background: #fff;
+    display: flex;
+    margin: 20rpx 30rpx 25rpx;
+    padding: 20rpx 0;
+    border-radius: 10rpx;
+}
+.cooppoint-list image{
+    width: 40rpx;
+}
+.cooppoint-list{
+    flex: 1;
+    text-align: center;
+}
+.coop-ming{
+    background: #518bee;
+    color:#fff;
+    margin: 0 30rpx;
+    height: 90rpx;
+    font-size:35rpx;
+    text-align: center;
+    line-height: 90rpx;
+    border-radius: 10rpx;
+}
+.coop-opencreate{
+    margin:35rpx 30rpx 80rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.coop-opencreate view{
+    width: 300rpx;
+    height: 86rpx;
+    background: #fff;
+    line-height: 86rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.coop-opencreate .coop-create{
+    background: #518bee;
+    color: #fff;
+}

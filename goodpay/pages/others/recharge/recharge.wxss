@@ -1,0 +1,127 @@
+/* pages/recharge/recharge.wxss */
+page{
+   background: #f4f2f2;
+}
+.recharge-container{
+  height: 415rpx;
+  width: 750rpx;
+}
+ .recharge{
+  height: 40rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  line-height: 40rpx;
+  color: #585858;
+  font-size: 34rpx;
+  padding: 30rpx 0 36rpx 0;
+} 
+ .denomination-content{
+  height: 160rpx;
+  width: 680rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  align-content: space-between; 
+} 
+ .denomination-item{
+  height: 66rpx;
+  width: 194rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 68rpx;
+  border-radius: 20rpx;
+  color: #585858;
+  border: 1rpx solid #9f9f9f;
+} 
+ .active-item{
+  background: #374256;
+  color: #fff;
+  height: 68rpx;
+  width: 196rpx;
+  text-align: center;
+  line-height: 68rpx;
+  border-radius: 20rpx;
+} 
+.input{
+  height: 74rpx;
+  width: 680rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 42rpx;
+  border: 1rpx solid #9f9f9f;
+}
+.user-input{
+  height: 74rpx;
+  line-height: 74rpx;
+  font-size: 28rpx;
+  text-indent: 20rpx;
+  width: 90%;
+  position: absolute;
+  left: 10%;
+}
+.menoy{
+  height: 74rpx;
+  line-height: 74rpx;
+  position: absolute;
+  right: 66rpx;
+  top: 0;
+}
+.payment{
+  height: 186rpx;
+  width: 750rpx;
+}
+.pay-header{
+  height: 92rpx;
+  line-height: 92rpx;
+  width: 680rpx;
+  padding: 0 35rpx;
+  border-bottom: 2rpx solid #f4f2f2;
+}
+.weix-img{
+  height: 70rpx;
+  width: 70rpx;
+}
+.weix-text{
+  text-indent: 20rpx;
+}
+.pay-type{
+  height: 92rpx;
+  line-height: 92rpx;
+  width: 680rpx;
+  padding: 0 35rpx;
+  display: flex;
+  color: #585858;
+  justify-content: space-between;
+  align-items: center;
+}
+.weix-content{
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+}
+.success image{
+  display: block;
+  height: 70rpx;
+  width: 70rpx;
+}
+.btn{
+  height: 66rpx;
+  width: 680rpx;
+  background: #374256;
+  text-align: center;
+  line-height: 66rpx;
+  position: fixed;
+  bottom: 10rpx;
+  left: 35rpx;
+  color: #fff;
+  font-size: 34rpx;
+  border-radius: 10rpx;
+}
+.btn:active{
+  opacity: .8;
+}

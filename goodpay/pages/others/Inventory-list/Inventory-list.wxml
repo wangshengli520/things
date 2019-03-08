@@ -1,0 +1,9 @@
+<!--pages/Inventory-list/Inventory-list.wxml-->
+<!-- 检查要点清单列表 -->
+<view class='list'>
+   <view class='company' wx:for="{{checkList}}" wx:key="*this" bindtap='navToJc' data-id='{{item.id}}'>
+     <text>{{item.title}}</text>
+     <view class='right'><image src='../../images/3.png'></image></view>
+   </view>
+<view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+</view>

@@ -1,0 +1,238 @@
+/*查询任务导航*/
+.inquire-nav{
+    background: #374256;
+    height: 90rpx;
+    padding-top: 10rpx;
+  }
+.inquire-navbox{
+    width: 380rpx;
+    background: #fff;
+    display: flex;
+    font-size:26rpx;
+    text-align: center;
+    margin: 0 auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.inquire-navbox navigator{
+    flex: 1;
+}
+.other-navigator-hover{
+    background: #f85a59;
+    color: #fff;
+}
+.task-nickname{
+    margin-top: 36rpx;
+    padding:0 30rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+}
+.task-nickname image{
+    width: 106rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.task-nickname text{
+    font-size:40rpx;
+    font-weight: bold;
+    margin-left: 22rpx;
+    color: #434343;
+}
+/*余额*/
+.task-coins{
+    display: flex;
+    width: 690rpx;
+    margin:50rpx auto 0;
+}
+.task-coins view{
+    flex: 1;
+    text-align: center;
+    font-size: 30rpx;
+}
+.task-coins view text{
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #434343;
+}
+.task-line{
+    height: 50rpx;
+    width: 1px;
+    background: #dedede;
+    position: absolute;
+    right: 0;
+    top: 25rpx;
+}
+.task-yu{
+    position: relative;
+}
+.task-jin view image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left:10rpx;
+    vertical-align: middle;
+}
+.task-coins .task-jintext{
+    font-size: 30rpx;
+    font-weight: normal;
+    vertical-align: middle;
+}
+/*提现*/
+.task-withdrawal{
+    width: 700rpx;
+    display: flex;
+    margin:50rpx auto 0;
+    height: 155rpx;
+    box-shadow: 3rpx 3rpx 20rpx #dddddd;
+    padding-top:30rpx;
+    border-radius: 10rpx;
+}
+.task-withdrawal view image{
+    width: 76rpx;
+    height: 76rpx;
+}
+.task-withdrawal view{
+    flex:1;
+    text-align: center;
+}
+.task-withdrawal navigator{
+    font-size: 30rpx;
+}
+/*签到*/
+.signin{
+    width: 700rpx;
+    margin:26rpx auto 0;
+}
+.sigin-topltext{
+    font-weight: bold;
+}
+.sigin-topltextt{
+    font-size:30rpx;
+    color: #8f8f8f;
+    margin-top: 10rpx;
+}
+.sigin-top{
+    display: flex;
+    justify-content:space-between;
+}
+.sigin-topr{
+    width: 170rpx;
+    height: 70rpx;
+    background: #fb7c53;
+    color: #fff;
+    text-align: center;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    border-radius: 50rpx;
+}
+.sigin-centxt image{
+    width: 65rpx;
+    height:65rpx;
+}
+.sigin-cen{
+    display: flex;
+    margin-top: 30rpx;
+}
+.sigin-cen .sigin-centxt{
+    flex: 1;
+    font-size: 30rpx;
+    color: #898989;
+    text-align: center;
+    position: relative;
+}
+.sigin-line{
+    width: 35rpx;
+    height: 1rpx;
+    background: #f0f0f0;
+    position:absolute;
+    top:68rpx;
+    left: 82rpx;
+    z-index: 66;
+}
+.singin-bot image{
+    width: 688rpx;
+    height: 162rpx;
+}
+.singin-bot{
+    margin-top: 40rpx;
+}
+.newtask-list image{
+    width:40rpx;
+    height: 40rpx;
+}
+.newtask{
+    background: #f9f9f9;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx; 
+}
+.newtask-box{
+    background: #fff;
+    font-size: 30rpx;
+}
+.newtask-list{
+    border-top: 2rpx solid #f4f4f4;
+    padding:30rpx 30rpx;
+}
+.newtask-boxtxt{
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 30rpx;
+    color: #0e0e0e;
+}
+.newtask-listl image{
+    float: left;
+}
+.newtask-listlr{
+    float: left;
+    width: 400rpx;
+}
+.newtask-listr{
+    float:right;
+}
+.newtask-listl{
+    float: left;
+}
+.newtask-listlr{
+    margin-left: 20rpx;
+}
+.newtask-listlrr{
+    color: #a1a1a1;
+}
+.newtask-listr{
+    width: 180rpx;
+    height: 64rpx;
+    border:1rpx solid #ec4437;
+    border-radius: 50rpx;
+    color: #ec4437;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 64rpx;
+    margin-top: 10rpx;
+}
+.newtask-btn{
+    height: 64rpx;
+    border:1rpx solid #ec4437;
+    border-radius: 50rpx;
+    color: #ec4437;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 64rpx;
+    margin-top: 10rpx;
+    background: none;
+    padding: 0;
+    width: 180rpx;
+    float:right;
+}
+.task-footer{
+    height: 160rpx;
+    background: #f6f6f6;
+    text-align: center;
+    line-height: 160rpx;
+    font-size: 30rpx;
+    color: #7f7f7f;
+}
+.task-footer text{
+    color: #3a95e6;
+}

@@ -1,0 +1,39 @@
+/* pages/homepage/homepage.wxss */
+
+/* pages/homepage/homepage.wxss */
+.logo-content image{  margin: 0 auto;  
+display: block;  
+height: 73rpx; 
+ width: 253rpx;  
+ margin-top: 220rpx;
+ }
+ .warrant{ 
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;  
+    margin-top: 50rpx;  
+    font-size: 24rpx;  
+    color: #6b6b6b;}
+.warrant-btn{ 
+  height: 76rpx;  
+  width: 406rpx;  
+  color: #fff;  
+  background: #374256;  
+  text-align: center;  
+  margin: 0 auto;  
+  margin-top: 134rpx;  
+  line-height: 76rpx;  
+  font-size: 32rpx;  
+  border-radius: 10rpx;}
+
+/* pages/homepage/homepage.wxss */
+.logo-content image{
+  margin: 0 auto;
+  display: block;
+  height: 253rpx;
+  width: 253rpx;
+  margin-top: 220rpx;
+}
+.warrant{
+  height: 28rpx;
+}

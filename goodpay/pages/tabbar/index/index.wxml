@@ -1,0 +1,192 @@
+<!--index.wxml-->
+<!-- 顶部导航 -->
+<view class='pick'>
+<view class='localtions'>
+   <image src='../../../images/orientate.png' class='position-img'></image>
+{{locations}}</view>
+  <picker class='details' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <text>{{region[0]}}{{region[1]}}{{region[2]}}</text>
+      <image src='../../../images/4.png'></image> 
+  </picker>
+    <picker 
+      class='details' 
+      mode="selector" 
+      range="{{brandList}}" 
+      value="{{brandList[index]}}"
+      range-key="{{'name'}}"   
+      bindchange="listenerPickerSelected">
+      <text>{{brandList[index].name}}</text>
+      <image src='../../../images/4.png'></image> 
+    </picker>
+</view>
+<view class='head'>
+  <form bindsubmit="searchSubmit" action="">
+  <image src='../../../images/search.png' class='image'></image>
+  <input class='input'
+  value='{{usersearch}}' 
+  bindconfirm="searchProduct"></input>
+  </form>
+</view>
+
+  <view class="container">
+    <view class="{{animate}}">
+      <block wx:for="{{texts}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+        <text>{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+<!-- 轮播滑块 -->
+<swiper class='swiper' indicator-dots="{{indicatorDots}}"
+  circular='true'
+   interval="{{interval}}" indicator-color="#fff" indicator-active-color="#9f9f9f"  duration="{{duration}}">
+  <block>
+    <swiper-item class="businessName_bg">
+    <block wx:if="{{businessCardList[1].companyLongitude==1}}">
+       <image src='../../../images/vip.png' class='vip'></image>   
+    </block>
+       <view class='swiper-center-F'>
+          <view class='swiper-for'>
+                <image src='{{businessCardList[0].headImgUrl}}' bindtap='navToCardUrl' data-id='{{businessCardList[0].id}}' data-relName='{{businessCardList[0].relName}}'></image>
+                <view class='nickName'>{{businessCardList[0].nickName}}</view> 
+          </view>
+          <view class="ewm" bind:tap="ontoCardd">
+            <image src="../../../images/hewm.png"></image>
+            <view>名片码</view>
+          </view>
+                <view class='swiper-bottom'>
+                <view class='bottom-lt'>
+                    <view class="swiper-name">
+                      <image src="../../../images/swiper-name.png" class='phone-img'></image>
+                      <text class="phone-text">{{businessCardList[0].name}}</text>
+                    </view>
+                    <view class='phone-box'>
+                    <image src='../../../images/phone.png' class='phone-img'></image>
+                    <text class='phone-text'> {{businessCardList[0].companyPhone}}</text>
+                    </view>  
+                    <view class='weix'>
+                    <image src='../../../images/msg2.png' class='phone-img'></image>
+                    <text class='phone-text'>  {{businessCardList[0].phone}}</text>
+                    </view>              
+                </view>
+                <view class='bottom-rt'>
+                    <view class='like-box'>
+                        <view class='like-tp'>
+                          <image src='../../../images/like.png' class='like-icon'></image>
+                          <text class='like-num color1'>{{businessCardList[0].num}}</text>
+                        </view>
+                        <view class='like-text'>受喜欢</view>
+                    </view>
+                    <view class='like-line'></view>
+                    <view class='like-box'>
+                       <view class='like-tp'>
+                          <image src='../../../images/Rankings.png' class='like-icon'></image>
+                          <text class='like-num color2'>{{businessCardList[0].sex}}</text>
+                        </view>
+                        <view class='like-text'>访问量</view>
+                    </view>
+                </view>
+                </view>
+      </view>
+    </swiper-item>
+      <!-- <view class='swiper-center' >     
+          <view class='swiper-navig'  wx:key="*this">
+                <view bindtap='navToUrl' data-url='../..{{item.url}}'>      
+                  <view class='navig'>
+                    <image src='{{item.img}}'></image> 
+                  </view>
+                  <view class='text'>{{item.title}}</view>                     
+                </view>
+          </view>
+      </view> -->
+    <swiper-item>
+      <view class='swiper-center' >
+          <view class='swiper-navig' wx:for="{{listString}}" wx:key="*this">
+            <view bindtap='navToUrl' data-url='{{item.url}}'>
+              <view class='swiper-pay'>
+                  <image src='{{item.img}}'></image> 
+              </view>
+              <view class='text'>{{item.title}}</view>            
+            </view>
+          </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 为您推荐 -->
+<view class='recom'>为您推荐</view>
+<view class='goods'>
+  <block wx:if="{{cooperationList.length==0}}">
+      <view class='zanwu'>暂无数据...</view>
+  </block>
+  <block wx:else>
+
+    <view class='product-name' wx:for="{{cooperationList}}" wx:key="*this" bindtap='navToFb' data-id='{{item.id}}'>
+    <view class='item-img'>
+      <image src='{{item.headImgUrl}}' class='left-img'></image>
+    </view>
+    <view class='item-title'>
+        <text>{{item.title}}</text>
+        <view class="chanName">{{item.businessName}} <block wx:if="{{item.businessName!=''}}"> |</block> {{item.companyName}}</view>
+    </view>
+    <block wx:if="{{item.isLight==1||item.isTop==1}}"><text class="line-heights">{{item.isLight==1?"【曝光】":"【置顶】"}}</text></block>
+       <view class="item-article"> <text>{{item.article}}</text></view>
+       <view class='comment'>
+          <view class='browse-box'>
+              <image src='../../../images/news.png' class='browse'></image>
+              <text class='seeNum'>({{item.commNum}})</text>
+          </view>
+          <view class='browse-box'>
+              <image src='../../../images/laud.png' class='laud'></image>
+              <text class='seeNum'>({{item.zanNum}})</text>
+          </view>
+          <view class='browse-box'>
+              <image src='../../../images/Fabulous.png' class='pageview'></image>
+              <text class='seeNum'>({{item.collNum}})</text>
+          </view>
+       </view>
+    </view>
+
+
+  
+    <view class='lode' hidden='{{isLoading}}'>{{loading}}</view>
+  </block>
+</view>
+<!-- 悬浮导航 -->
+<view class='right'>
+  <view class="add {{showView?'show':''}}" bindtap='onChangeShowState'><image src='../../../images/add.png'></image></view>
+  <view class="release one {{showView?'show':''}}" bindtap='navToXF' data-key='{{3}}'>发布</view>
+  <view class="release two {{showView?'show':''}}" bindtap='navToXF' data-key='{{0}}'>置顶</view>
+  <view class="release three {{showView?'show':''}}" bindtap='navToXF' data-key='{{1}}'>曝光</view>
+  <view class="release four {{showView?'show':''}}" bindtap='navToHY'>会员</view>
+</view>
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <view class='chooseBtn'>
+          <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+          <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>        
+        </view>
+        <view class="line"></view> 
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <picker-view-column>
+           <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+             {{sheng.name}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+</view>  
+<!-- tabbar -->
+<view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

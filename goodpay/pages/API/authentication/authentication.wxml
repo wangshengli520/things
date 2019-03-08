@@ -1,0 +1,21 @@
+<!--pages/authentication/authentication.wxml-->
+<!-- 认证外包商 -->
+<view class='container'>
+    <!-- 搜索框 -->
+    <view class='header-content'>
+        <view class='search-bg'>
+          <form bindsubmit="searchSubmit" action="">
+              <image src="../../../images/search.png" class='search-image'></image>
+              <input placeholder="请输入关键词"  class="keyword" bindconfirm="searchProduct" ></input>
+          </form>
+        </view>
+        <view class='data'>最近更新时间：{{year}}年{{month}}月{{day}}日</view>  
+    </view>
+    <view class='search-list'>
+        <view class='search-item' wx:for="{{waibaoshangList}}" wx:key="*this" bindtap='navToXQ' data-id='{{item.id}}'>
+              <view class='item-lt'>{{item.companyName}}</view>
+              <view class='item-rt'>></view>
+        </view>
+    </view>
+    <view class='more' hidden="{{isLoading}}">{{loading}}</view>
+</view>

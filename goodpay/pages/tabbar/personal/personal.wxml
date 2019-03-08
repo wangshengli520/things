@@ -1,0 +1,152 @@
+<!--pages/personal/personal.wxml-->
+<!-- 我的 -->
+<view class='container'>
+   <view class="personl-top">
+     <view class='userInfo'>
+        <view class='user-img' bindtap='navToPD'>
+            <image src='{{photo}}'></image>
+        </view>
+        <view class='user-text'>
+            <view class='user-item'>{{nickname}}</view>
+            <view class='user-item' bindtap='overPerson'>账号：{{phone == '' ?'点我完善信息':phone }}</view>
+        </view>
+    </view>
+   </view>
+    <view class='wallet'>
+            <view class='wallet-lt'>
+                  <image src='../../../images/balance.png'  class='img-icon'></image>
+                  <view class='balance'>余额：￥{{member.money}}</view>
+            </view>
+            <view class='line-H'></view>
+            <view class='wallet-rt' bindtap='withMoney'>
+                  <image src='../../../images/wallet1.png' class='img-icon1'></image>
+                  <view class='balance'>提现</view>
+            </view>
+        </view>
+   <view class='bg-line'></view>
+      <view class='menu-items' bindtap='goMemberVip'>
+        <view class='item-container'>
+          <image src='../../../images/huiyuan.png' class='item-icon'></image>
+          <view class='item-type'>会员权益（点我点亮）</view>
+        </view>
+      </view>
+   <view class='bg-line'></view>
+    <view class='menu'>
+        <view class='menu-item instructions-box' bindtap='navToFenXiao'>
+            <view class='item-lt'>
+                <image src='../../../images/distribution.png' class='item-icon'></image>
+                <view class='item-title colorText'>合伙人赚钱</view>
+            </view>
+           
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class="instructions-main {{InShow?'instshow':''}}">
+           {{Instructionstext.content}}
+        </view>
+        
+        <!-- <view class='menu-item' bindtap='navToWallet'>
+            <view class='item-lt'>
+                <image src='../../../images/wallet.png' class='item-icon'></image>
+                <view class='item-title'>我的钱包</view>
+            </view>
+           <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view> -->
+        <view class='menu-item' bindtap='navToSchehuo'>
+            <view class='item-lt'>
+                <image src='../../../images/hehuo.png' class='item-icon'></image>
+                <view class='item-title'>合伙人赚钱及使用说明</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToSc'>
+            <view class='item-lt'>
+                <image src='../../../images/collect.png' class='item-icon'></image>
+                <view class='item-title'>我的收藏</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToMp'>
+            <view class='item-lt'>
+                <image src='../../../images/card.png' class='item-icon'></image>
+                <view class='item-title'>我的名片夹</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToFB'>
+            <view class='item-lt'>
+                <image src='../../../images/release.png' class='item-icon'></image>
+                <view class='item-title'>我的发布</view>
+            </view>
+            <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToQR'>
+            <view class='item-lt'>
+                <image src='../../../images/QRCode.png' class='item-icon'></image>
+                <view class='item-title'>我的二维码</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item'>
+            <view class='item-lt'>
+                <image src='../../../images/service.png' class='item-icon'></image>
+                <!-- <view class='item-title'></view> -->
+                <button open-type="contact" class='item-title item-titlecon'>客服中心</button>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToJl'>
+            <view class='item-lt'>
+                <image src='../../../images/group.png' class='item-icon'></image>
+                <view class='item-title'>用户交流群</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+        <view class='menu-item' bindtap='navToUS'>
+            <view class='item-lt'>
+                <image src='../../../images/anenst.png' class='item-icon'></image>
+                <view class='item-title'>关于我们</view>
+            </view>
+             <view class='item-rt'>
+              <image src='../../../images/3.png'></image>
+          </view>
+        </view>
+    </view>
+</view>
+    <!--弹出手机验证码-->    
+<view class='invite_show' hidden="{{flag}}" >
+   <view class='show_img'>   
+      <form bindsubmit='phoneBox'>
+        <input placeholder='请输入手机号' name='phone' placeholder-class="input-placeholder" placeholder-style="color: #000" class='handset'></input>   
+          <view class='view_input'>   
+          <input placeholder='输入验证码' name="code" class='sbmuin'></input>   
+          <button class='sbmuin_button'  form-type='submit' disabled='{{disabled}}' data-id="2" > {{timeOut}}</button>
+          </view>
+        <button class='view_button' form-type='submit'>确认绑定</button> 
+        </form>
+        <view class='close' bindtap='close'>×</view>
+   </view>
+</view>
+
+
+<!-- tabbar -->
+<view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

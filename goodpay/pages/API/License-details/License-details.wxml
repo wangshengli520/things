@@ -1,0 +1,65 @@
+<!--pages/License-details/License-details.wxml-->
+<!-- 支付牌照查询详情 -->
+<view class='list'>
+    <view class='item-text'>许可证编号：</view>
+    <view class='item-title'>{{paypaizhao.okNo}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>公司名称：</view>
+    <view class='item-title'>{{paypaizhao.companyName}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>机构代码：</view>
+    <view class='item-title'>{{paypaizhao.postId}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>营业场所：</view>
+    <view class='item-title'>{{paypaizhao.companyAddress}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>业务类型：</view>
+    <view class='item-title'>{{paypaizhao.businessType}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>业务范围：</view>
+    <view class='item-title'>{{paypaizhao.companyFanwei}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>所在地：</view>
+    <view class='item-title'>{{paypaizhao.companyLocation}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>批次：</view>
+    <view class='item-title'>{{paypaizhao.type}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>首次发证时间：</view>
+    <view class='item-title'>{{paypaizhao.first}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>持续发证日期：</view>
+    <view class='item-title'>{{paypaizhao.create}}</view>
+</view>
+
+<view class='list'>
+    <view class='item-text'>许可有效期至：</view>
+    <view class='item-title'>{{paypaizhao.out}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>简称：</view>
+    <view class='item-title'>{{paypaizhao.companyDesc}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>产品名称：</view>
+    <view class='item-title'>{{paypaizhao.productName}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>网址：</view>
+    <view class='item-title'>{{paypaizhao.compayNet}}</view>
+</view>
+<view class='list'>
+    <view class='item-text'>备注：</view>
+    <view class='item-title'>{{paypaizhao.companyRemark}}</view>
+</view>
+
+

@@ -1,0 +1,54 @@
+<!--pages/Pay-licence/Pay-licence.wxml-->
+<!-- 支付牌照查询 -->
+<view class='head'>
+   <text decode="{{true}}" space="{{true}}">关&ensp;键&ensp;字：</text>
+   <input class='input' placeholder='请输入关键字' bindinput='guanjianzi'></input>
+</view>
+<!-- 所在地-->
+<view class='head'>
+   <text decode="{{true}}" space="{{true}}">所&ensp;在&ensp;地：</text>
+    <picker class='picker' mode="selector" bindchange="bindChange" placeholder='请输入关键字' range="{{multiArray}}" value="{{multiIndex}}" >
+       <block wx:if="{{show}}">请选择所在地</block>
+       <text>{{multiArray[multiIndex]}}</text>
+     <view class='right'><image src='../../../images/3.png'></image></view>
+  </picker>
+</view>
+<!-- 许可地区 -->
+<view class='head' bindtap='showdiqu'>
+   <text>许可地区：</text>
+   <view class='picker'>
+     <block wx:if="{{isShowaa}}">
+        <text class='chooseAddress'>{{QXZ}}</text>
+     </block>
+     <block wx:else>
+         <view class='areas'>
+          <block wx:for="{{storageData}}">
+              {{item.city}}              
+          </block>
+         </view>
+     </block>
+     <view class='right'><image src='../../../images/3.png'></image></view>
+   </view>   
+</view>
+<!-- 批次 -->
+<view class='head'>
+   <text decode="{{true}}" space="{{true}}">批&ensp;&ensp;&ensp;&ensp;次：</text>
+    <picker mode="selector" range="{{demo}}" value="{{home}}" bindchange="listenerPickerSelected" class='picker'>
+    <block wx:if="{{isshow}}">请选择批次</block>
+    <text>{{demo[home]}}</text>
+    <view class='right'><image src='../../../images/3.png'></image></view>
+</picker>
+</view>
+<!-- 业务类型 -->
+<view class='text'>业务类型（可多选）：</view>
+<checkbox-group bindchange="checkboxChange" class='foot'>   
+   <view class='checkbox'>
+      <view class='left' wx:for="{{items}}" wx:key="*this">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+       <text class='left-text'>{{item.value}}</text> 
+     </view>
+     </view>
+</checkbox-group>
+<!-- 查询 -->
+<button class='button' bindtap='navToList' data-status='{{0}}'>查询</button>
+<button class='demo' bindtap='navToList' data-status='{{2}}'>已注销支付机构名单</button>

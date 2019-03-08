@@ -1,0 +1,60 @@
+<!--pages/authenticationdetails/authenticationdetails.wxml-->
+<!-- 认证外包商详情 -->
+<view class='container'>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>公司名称</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.companyName}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>注册资金</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayMoney}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>法定代表人（负责人）</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayPerson}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>住所（营业场所）</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayAddress}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>联系人及联系方式</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayPhone}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>业务类型</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayType}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>业务覆盖范围</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayOver}}
+    </view>
+    <view class='item-title'>
+      <view class='sign'></view>
+      <view class='sign-title'>注册登记公告日期</view>
+    </view>
+    <view class='item-content'>
+          {{waibaoshang.compayDate}}
+    </view>
+</view>

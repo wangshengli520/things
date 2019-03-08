@@ -1,0 +1,22 @@
+<!--pages/acquiring/acquiring.wxml-->
+<view class='head'>
+      <form bindsubmit="searchSubmit" action="">
+      <image src='../../../images/search.png' class='image'></image>
+      <input class='input' 
+      placeholder='搜索关键词'
+      bindblur="bindblur"
+      bindconfirm="searchProduct" 
+      value="{{inputValue}}"></input>
+      </form>
+</view>
+    <view class='text'>共搜索到{{count}}条数据</view>
+<view class='searchContent' hidden='{{count==0}}'>
+    <view class='rows'>
+        <view class='item-left'>收单机构号代码</view>
+        <view class='item-right'>所属支付机构</view>
+    </view>
+    <view class='rows' wx:for="{{shouList}}" wx:key="*this">
+        <view class='item-left'>{{item.postCode}}</view>
+        <view class='item-right'>{{item.postName}}</view>
+    </view>
+</view>

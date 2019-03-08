@@ -1,0 +1,31 @@
+<!--pages/Unionpay/Unionpay.wxml-->
+<!-- 银联号查询 -->
+<view class='head'>
+   <text>关键字：</text>
+   <input class='input' bindinput='gjInput'  placeholder='请输入关键字' value='{{inputValue}}'></input>
+</view>
+<!-- 银行 -->
+<view class='head'>
+   <text decode="{{true}}" space="{{true}}">银&ensp;&ensp;行：</text>
+   <picker class='details' mode="selector" range="{{selectData}}" value="{{index}}" bindchange="institutionsPickerSelected">
+        <view class='instin'>
+           <view class='good'>{{selectData[index]}}</view>
+           <view class='left'><image src='../../../images/1.png'></image></view>
+        </view>
+        
+    </picker>
+</view>
+<!-- 所在地 -->
+<view class='head'>
+   <text>所在地：</text>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+       <block wx:if="{{show}}">
+            请选择所在地
+       </block>
+       {{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+</view>
+<!-- 查询 -->
+<button class='button' bindtap='search'>查询</button>

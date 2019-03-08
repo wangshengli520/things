@@ -1,0 +1,17 @@
+<!--pages/XieHuihuiYuan/XieHuihuiYuan.wxml-->
+<!-- 中国支付协会会员名单查询 -->
+<view class='container'>
+    <view class='title'>
+        查询支付协会会员清单
+    </view>
+    <view class='userInput'>
+        <view class='userInput-lt'>关键字:</view>
+        <input placeholder="请输入关键字进行查询" 
+        class='userInput-rt' 
+        bindinput='huiyuanInput' 
+        bindblur="bindblur" 
+        value="{{inputValue}}"></input>
+    </view>
+    <button class='btn' bindtap='search'>查询</button>
+    
+</view>

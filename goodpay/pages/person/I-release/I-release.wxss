@@ -1,0 +1,15 @@
+/* pages/I-release/I-release.wxss */
+.head{
+  width: 680rpx;
+  padding: 30rpx 36rpx;
+  border-bottom: 2rpx solid #f4f2f2;
+  font-size: 28rpx;
+  color: #383838;
+  line-height:50rpx
+}
+.zanwu{
+  font-size: 36rpx;
+  color:#666;
+  line-height: 100rpx;
+  text-align: center;
+}
